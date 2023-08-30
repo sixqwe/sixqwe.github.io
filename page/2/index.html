@@ -1,446 +1,175 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+    <link rel="alternate icon" type="image/png" href="/img/favicon.png">
+    <title>窄路 | 北回归线</title>
+    
+<link rel="stylesheet" href="/css/reset.css">
 
+    
+<link rel="stylesheet" href="/css/style.css">
 
+    
+<link rel="stylesheet" href="/css/markdown.css">
 
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <meta name="author" content="John Doe">
-
-
-
-
-
-<title>Hexo</title>
-
-
-
-<link rel="icon" href="/favicon.png">
-
-
-
-<link rel="stylesheet" href="/css/main.css">
-
-
-<link rel="stylesheet" href="/lib/nprogress/nprogress.css">
-
-
-
-<script src="/lib/jquery.min.js"></script>
-
-
-<script src="/lib/iconify-icon.min.js"></script>
-
-
-<script src="https://cdn.tailwindcss.com?plugins=typography"></script>
-<script>
-  tailwind.config = {
-    darkMode: "class",
-  };
-</script>
-
-
-<script src="/lib/nprogress/nprogress.js"></script>
-
-<script>
-  $(document).ready(() => {
-    NProgress.configure({
-      showSpinner: false,
-    });
-    NProgress.start();
-    $("#nprogress .bar").css({
-      background: "#de7441",
-    });
-    $("#nprogress .peg").css({
-      "box-shadow": "0 0 2px #de7441, 0 0 4px #de7441",
-    });
-    $("#nprogress .spinner-icon").css({
-      "border-top-color": "#de7441",
-      "border-left-color": "#de7441",
-    });
-    setTimeout(function () {
-      NProgress.done();
-      $(".fade").removeClass("out");
-    }, 800);
-  });
-</script>
-
-<script>
-  (function () {
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const setting = localStorage.getItem("hexo-color-scheme") || "auto";
-    if (setting === "dark" || (prefersDark && setting !== "light"))
-      document.documentElement.classList.toggle("dark", true);
-    let isDark = document.documentElement.classList.contains("dark");
-  })();
-
-  $(document).ready(function () {
-    // init icon
-    const prefersDark =
-      window.matchMedia &&
-      window.matchMedia("(prefers-color-scheme: dark)").matches;
-    const isDark = document.documentElement.classList.contains("dark");
-    $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
-
-    function toggleGiscusTheme() {
-      const isDark = document.documentElement.classList.contains("dark");
-      const giscusFrame = document.querySelector("iframe.giscus-frame");
-      if (giscusFrame) {
-        giscusFrame.contentWindow.postMessage(
-          {
-            giscus: {
-              setConfig: {
-                theme: isDark ? "dark" : "light",
-              },
-            },
-          },
-          "https://giscus.app"
-        );
-      }
-    }
-
-
-    // toggle dark mode
-    function toggleDark() {
-      let isDark = document.documentElement.classList.contains("dark");
-      isDark = !isDark;
-      const setting = localStorage.getItem("hexo-color-scheme") || "auto";
-      document.documentElement.classList.toggle("dark", isDark);
-      $("#theme-icon").attr("icon", isDark ? "ri:moon-line" : "ri:sun-line");
-      if (prefersDark === isDark) {
-        localStorage.setItem("hexo-color-scheme", "auto");
-      } else {
-        localStorage.setItem("hexo-color-scheme", isDark ? "dark" : "light");
-      }
-      toggleGiscusTheme();
-    }
-    $("#toggle-dark").click(toggleDark);
-    // listen dark mode change
-    window
-      .matchMedia("(prefers-color-scheme: dark)")
-      .addEventListener("change", (e) => {
-        const setting = localStorage.getItem("hexo-color-scheme") || "auto";
-        if (setting === "auto") {
-          document.documentElement.classList.toggle("dark", e.matches);
-          $("#theme-icon").attr(
-            "icon",
-            e.matches ? "ri:moon-line" : "ri:sun-line"
-          );
-          toggleGiscusTheme();
-        }
-      });
-  });
-</script>
-
-
-
+    
+<link rel="stylesheet" href="/css/fonts.css">
 
 <meta name="generator" content="Hexo 6.3.0"></head>
-<body class="font-sans bg-white dark:bg-zinc-900 text-gray-700 dark:text-gray-200">
-  <header class="fixed w-full px-5 py-1 z-10 backdrop-blur-xl backdrop-saturate-150 border-b border-black/5">
-  <div class="max-auto">
-    <nav class="flex items-center text-base">
-      <a href="/" class="group">
-        <h2 class="font-medium tracking-tighterp text-l p-2">
-          <img class="w-5 mr-2 inline-block transition-transform group-hover:rotate-[30deg]" id="logo" src="/images/logo.svg" alt="Hexo" />
-          Hexo
-        </h2>
-      </a>
-      <div id="header-title" class="opacity-0 md:ml-2 md:mt-[0.1rem] text-xs font-medium whitespace-nowrap overflow-hidden overflow-ellipsis">
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="header">
+    <a class="logo" href="/">窄路</a>
+    <ul class="nav">
         
-      </div>
-      <div class="flex-1"></div>
-      <div class="flex items-center gap-3">
+        <li><a href="/">首页</a></li>
         
-          <a class="hidden sm:flex" href="/archives">Posts</a>
+        <li><a href="/archives">归档</a></li>
         
+        <li><a href="/about">关于</a></li>
         
-          
-            <a class="w-5 h-5 hidden sm:flex" title="Github" target="_blank" rel="noopener" href="https://github.com/xbmlz">
-              <iconify-icon width="20" icon="ri:github-line"></iconify-icon>
-            </a>
-          
-        
-        <a class="w-5 h-5" title="toggle theme" id="toggle-dark">
-          <iconify-icon width="20" icon="" id="theme-icon"></iconify-icon>
-        </a>
-      </div>
-      <div class="flex items-center justify-center gap-3 ml-3 sm:hidden">
-        <span class="w-5 h-5" aria-hidden="true" role="img" id="open-menu">
-          <iconify-icon width="20" icon="carbon:menu" ></iconify-icon>
-        </span>
-        <span class="w-5 h-5 hidden" aria-hidden="true" role="img" id="close-menu">
-          <iconify-icon  width="20" icon="carbon:close" ></iconify-icon>
-        </span>
-      </div>
-    </nav>
-  </div>
-</header>
-<div id="menu-panel" class="h-0 overflow-hidden sm:hidden fixed left-0 right-0 top-12 bottom-0 z-10">
-  <div id="menu-content" class="relative z-20 bg-white/80 px-6 sm:px-8 py-2 backdrop-blur-xl -translate-y-full transition-transform duration-300">
-    <ul class="nav flex flex-col sm:flex-row text-sm font-medium">
-      
-        <li class="nav-portfolio sm:mx-2 border-b sm:border-0 border-black/5 last:border-0 hover:text-main">
-          <a href="/archives" class="flex h-12 sm:h-auto items-center">Posts</a>
-        </li>
-      
     </ul>
-  </div>
-  <div class="mask bg-black/20 absolute inset-0"></div>
+</div>
+                
+                <div class="post-list">
+    
+    <div class="post">
+        <a class="post-title" href="/2023/08/30/q9adg/%E7%88%B1/">爱到底是什么</a>
+        <div class="post-except">
+            #爱#
+今天追本溯源的说一下爱这个概念。如果你有英语基础，对深入的理解这个概念会大有好处。
+下面是拉丁文版本、英王钦定本和中文和合本的对照。这三个版本本身有无数的小版本差异，我们这里不去打这个口舌官司，只看最显然的大局。
+为什么要选Bible？因为我们现在在东亚所谈的这个“爱”的概念，不是一个本来直接存在于东亚文化里的原生概念，
+为什么选择这三个版本？
+这个拉丁文版本，是基督教被立为罗马国教后确立的正典版本。
+带着你们一个词一个词的过一过。我先说明一下——我并不专精拉丁文，也
+            <a class="read-more" href="/2023/08/30/q9adg/%E7%88%B1/"> ... </a>
+        </div>
+        <div class="post-date">2023.08.30</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2023/08/30/q9adg/%E5%AF%B9%E4%BA%BA%E7%B1%BB%E5%A4%B1%E6%9C%9B/">对人类失望怎么办？</a>
+        <div class="post-except">
+            #对人类失望#
+恭喜你，你终于可以正式的开始来点人生观、价值观了，因为你刚刚补上了最重要的世界观的大洞。
+这一条认知，对你做个稍微可以让人忍受的人（甚至是一个有较大可能成功的人）有重大的、决定性的意义。
+可喜可贺。
+这绝对不是一件坏事，而是一件好事。
+尺阔之溪，一跃可过。过了这个坎，前头就是海阔天空，自由自在，无忧无虑了。
+而且你非过不可。
+为什么？
+
+1）当你到了这个点，你终于可以停止想象“不是我对人的期待有问题，而是这个人有问题，换一个人就会好了”。
+这个男朋友不够宠我、
+            <a class="read-more" href="/2023/08/30/q9adg/%E5%AF%B9%E4%BA%BA%E7%B1%BB%E5%A4%B1%E6%9C%9B/"> ... </a>
+        </div>
+        <div class="post-date">2023.08.30</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2023/08/30/q9adg/%E5%AD%B0%E5%BC%BA%E5%AD%B0%E5%BC%B1/">真正想做的事</a>
+        <div class="post-except">
+            #孰强孰弱#
+父母们要想清楚一个很根本的问题：
+你到底是应该要教子女成为一个合格的强者，还是应该教ta成为一个合格的弱者？
+你们想过这是一个问题吗？
+这个问题是什么意思？
+它的答案应该是什么？
+先给你们时间想想。
+
+我们先定义一下什么叫弱者。
+弱者，是那些体力上比较差、速度比较慢、耐力比较弱、脑力上比较不敏捷的人，是那些家世不够强、学历比较低的人。总体上，弱者是那些可替代性比较强的人，是权力金字塔上偏向底座的那部分人。
+强者则与弱者在上述所有方面都相反，ta们更高、更快、更强
+            <a class="read-more" href="/2023/08/30/q9adg/%E5%AD%B0%E5%BC%BA%E5%AD%B0%E5%BC%B1/"> ... </a>
+        </div>
+        <div class="post-date">2023.08.30</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2023/08/30/q9adg/%E5%9C%B0%E7%8B%B1/">地狱</a>
+        <div class="post-except">
+            #地狱这东西#
+你们听到“地狱”这个词，脑袋里想到是什么？
+头长牛角、肋生肉翅的大菠萝中央端坐，两班站立各色青面獠牙的鬼差怪役手持各式刑具，只待大王一声令下，就将犯人拖了下去斧剁油煎，一日三次炸至口感酥脆色泽金黄？
+你脑袋里的这幅画面很聊斋啊。
+同志们，这个“地狱”是个很神奇的东西。
+它甚至连佛教的概念都不能算，只是汉传佛教对佛教的“堕落之境”的本能想象。汉人能想到的最坏最恐怖的东西，就是以恐吓为目的而公开实施的酷刑。你告诉他“堕落之境”即“精神上能想象的最可怕情形”。他立刻
+            <a class="read-more" href="/2023/08/30/q9adg/%E5%9C%B0%E7%8B%B1/"> ... </a>
+        </div>
+        <div class="post-date">2023.08.30</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2023/08/30/q9adg/%E4%B8%96%E9%9D%A2/">明明经常带孩子旅游长见识，为什么发现孩子的格局还是打不开，像没见过世面？</a>
+        <div class="post-except">
+            #世面#
+这需要更深的尊重构建认知的过程。
+如果是带小朋友们出去看东西，一定要注意不要按照成人心目中的“重要性级别”来安排行程。
+啥叫“重要性级别”呢？就是很多成人会把“这辈子一定要看看”的二十大目的地列表拿出来，按这个帮子女“提前搞定”。
+比如去看泰山日出啦、黄山啦、天安门升旗啦、长城啦、埃菲尔铁塔啦、岳阳楼啦……
+这实际上是父母们自己的“朝圣”之旅。
+但对没有你一生的文化情结背景、缺少上下文的小朋友们来说，这种奇观类的游览，留下的印象是很淡然的。
+比如，ta们并不见得理解
+            <a class="read-more" href="/2023/08/30/q9adg/%E4%B8%96%E9%9D%A2/"> ... </a>
+        </div>
+        <div class="post-date">2023.08.30</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2023/08/30/q9adg/%E4%B8%80%E7%82%B9%E5%B0%B1%E9%80%8F/">如何成为那种一点就透，悟性很高的人？</a>
+        <div class="post-except">
+            #一点就透#
+这个其实有在别处讲过，但在这里再单独讲一遍。
+这个要害很简单——
+任何人讲话都是有成本的，要讲到精确无比、滴水不漏，就要多花很多心思、多用很多成本。
+甚至可以这样说——如果要绝对精确、绝对滴水不漏，不可能令任何人产生任何意义上的错误理解的话，一句很简单的话，也会昂贵到普通人支付不起——这个你们可以参考一下国际条约文本的起草和谈判成本。事实上，就算是国际条约，也有的是窟窿——于是，可以说每个人说的每一句话都是有诠释空间的，每一句对话要想继续下去，接收方都要对发送方
+            <a class="read-more" href="/2023/08/30/q9adg/%E4%B8%80%E7%82%B9%E5%B0%B1%E9%80%8F/"> ... </a>
+        </div>
+        <div class="post-date">2023.08.30</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2023/08/30/about/">关于</a>
+        <div class="post-except">
+            我们只能行走在窄路，为真正的伟大开途主站链接：fravilion.top
+
+            <a class="read-more" href="/2023/08/30/about/"> ... </a>
+        </div>
+        <div class="post-date">2023.08.30</div>
+    </div>
+    
 </div>
 
-  <main class="p-12">
-    <section class="px-6 max-w-prose mx-auto gap-12 grid grid-cols-1">
-  <div class="flex flex-col h-48 items-center justify-center">
-    <h1 class="site-title text-4xl leading-relaxed">
-      Hexo
-    </h1>
-    <p class="text-gray-500 mt-2">
-      
-    </p>
-  </div>
-  
-  
-    
-    
-      <div class="relative pointer-events-none">
-        <span class="text-9xl opacity-10 absolute -left-11 -top-6 font-bold">2023</span>
-      </div>
-    
-    <a href="/2023/08/30/q9adg/%E7%88%B1/">
-      <header>
-        <h2 class="font-bold text-xl">
-          爱到底是什么
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          6 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/08/30/q9adg/%E5%AF%B9%E4%BA%BA%E7%B1%BB%E5%A4%B1%E6%9C%9B/">
-      <header>
-        <h2 class="font-bold text-xl">
-          对人类失望怎么办？
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          4 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/08/30/q9adg/%E5%AD%B0%E5%BC%BA%E5%AD%B0%E5%BC%B1/">
-      <header>
-        <h2 class="font-bold text-xl">
-          真正想做的事
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          9 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/08/30/q9adg/%E5%9C%B0%E7%8B%B1/">
-      <header>
-        <h2 class="font-bold text-xl">
-          地狱
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          9 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/08/30/q9adg/%E4%B8%96%E9%9D%A2/">
-      <header>
-        <h2 class="font-bold text-xl">
-          明明经常带孩子旅游长见识，为什么发现孩子的格局还是打不开，像没见过世面？
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          2 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/08/30/q9adg/%E4%B8%80%E7%82%B9%E5%B0%B1%E9%80%8F/">
-      <header>
-        <h2 class="font-bold text-xl">
-          如何成为那种一点就透，悟性很高的人？
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          2 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/08/30/%E7%AC%AC%E4%B8%80%E7%AF%87%E6%96%87%E7%AB%A0/">
-      <header>
-        <h2 class="font-bold text-xl">
-          第一篇文章
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
-    
-    
-    <a href="/2023/08/30/hello-world/">
-      <header>
-        <h2 class="font-bold text-xl">
-          Hello World
-        </h2>
-      </header>
-      <section class="text-gray-400 my-1 text-sm time">
-        <p class="line-clamp-4">
-          
-        </p>
-        <p class="line-clamp-4">
-          Aug 30
-          ·
-          1 min
-        </p>
-      </section>
-    </a>
-  
-</section>
-
-
-  </main>
-  <footer class="flex flex-col h-40 items-center justify-center text-gray-400 text-sm">
-  <!-- busuanzi -->
-  
-<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
-<!-- Busuanzi Analytics -->
-<div class="flex items-center gap-2">
-  <span>Visitor Count</span>
-  <span id="busuanzi_value_site_uv"></span>
-  <span>Totalview</span>
-  <span id="busuanzi_value_site_pv"></span>
+<div class="paginator">
+    <a class="extend prev" rel="prev" href="/">上一页</a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
 </div>
-<!-- End Busuanzi Analytics -->
+
+                <div class="footer">
+    <span>Copyright © 2022 窄路</span>
+    <span>Theme Designed By <a target="_blank" href="https://zheli.design/one-paper">這李設計</a></span>
+</div>
 
 
-  <!-- copyright -->
-  <div class="flex items-center gap-2">
-    <span>© 2022</span>
-    <iconify-icon width="18" icon="emojione-monotone:maple-leaf" ></iconify-icon>
-    <a href="https://github.com/xbmlz" target="_blank" rel="noopener noreferrer">xbmlz</a>
-  </div>
-  <!-- powered by -->
-  <div class="flex items-center gap-2">
-    <span>Powered by</span>
-    <a href="https://hexo.io/" target="_blank" rel="noopener noreferrer">Hexo</a>
-    <span>&</span>
-    <a href="https://github.com/xbmlz/hexo-theme-maple" target="_blank" rel="noopener noreferrer">Maple</a>
-  </div>
-
-</footer>
-
-  <iconify-icon class="fixed right-4 bottom-10 z-100 opacity-0" width="24" icon="ion:arrow-up-c" id="go-top"></iconify-icon>
-  
-<script src="/js/main.js"></script>
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
 
 
-  <script>
-    $(document).ready(function () {
-      const mapleCount = "10";
-      const speed = "0.5";
-      const mapleEl = document.getElementById("maple");
-      const maples = Array.from({ length: mapleCount }).map(() => {
-        const maple = document.createElement("div");
-        const scale = Math.random() * 0.5 + 0.5;
-        const offset = Math.random() * 2 - 1;
-        const x = Math.random() * mapleEl.clientWidth;
-        const y = -Math.random() * mapleEl.clientHeight;
-        const duration = 10 / speed;
-        const delay = -duration;
-        maple.className = "maple";
-        maple.style.width = `${24 * scale}px`;
-        maple.style.height = `${24 * scale}px`;
-        maple.style.left = `${x}px`;
-        maple.style.top = `${y}px`;
-        maple.style.setProperty("--maple-fall-offset", offset);
-        maple.style.setProperty("--maple-fall-height", `${Math.abs(y) + mapleEl.clientHeight}px`);
-        maple.style.animation = `fall ${duration}s linear infinite`;
-        maple.style.animationDelay = `${delay}s`;
-        mapleEl.appendChild(maple)
-        return maple
-      })
-    });
-  </script>
-  
+<script src="/js/highlight.min.js"></script>
 
 
-  <div class="w-screen h-screen -z-999" id="maple"></div>
-</body>
+<script src="/js/highlightjs-line-numbers.js"></script>
 
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
 </html>
