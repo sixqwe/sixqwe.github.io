@@ -1,0 +1,196 @@
+body {
+  	margin: 0;
+  	padding: 0;
+  	box-sizing: border-box;
+  	/* mobile 端切换横竖屏适配 */
+  	-ms-text-size-adjust: 100%;
+  	-webkit-text-size-adjust: 100%;
+  	/* 渲染优化 */
+  	-moz-osx-font-smoothing: grayscale;
+  	-webkit-font-smoothing: antialiased;
+  	font-size: 15px;
+  }
+
+  @media (min-width:767px) {
+  	body {
+  		margin: 0 15%;
+
+  	}
+  }
+
+  @media (min-width:900px) {
+  	body {
+  		margin: 0 20%;
+
+  	}
+  }
+
+  /* 按钮 */
+  .button {
+  	text-align: center;
+  	display: inline-block;
+  	padding: 0rem 6rem;
+  	font-size: 1rem;
+  	margin: 0.08rem 0.04rem;
+  	-webkit-transition-duration: 0.4s;
+  	border-radius: 4px
+  }
+
+  .button {
+  	background-color: #F0F0F0;
+  	color: black;
+  	border: 3px solid #742820;
+  }
+
+  .button:hover {
+  	background-color: #161823;
+  	color: white;
+  }
+
+  /* 人员介绍 */
+  #p {
+  	background-color: #B8C0C8;
+  	float: left;
+  	border-radius: 0.5rem;
+  	width: 45%;
+  	margin: 2px 2px 2.5% 2.5%;
+  }
+
+  #g {
+  	width: 15%;
+  	border-radius: 10rem;
+  	margin-top: 3px;
+  }
+
+  /* 自适应 */
+  @media screen and (max-width: 750px) {
+
+
+  	#p {
+  		border-radius: 1rem;
+  		float: none;
+  		width: 100%;
+  		margin: 0 0 0 0;
+  	}
+
+
+  }
+
+  /* 标题字体 */
+  span {
+  	float: left;
+  	width: 1.5em;
+  	font-size: 300%;
+  	font-family: algerian, courier;
+  	line-height: 100%;
+  	color: #742820;
+  }
+
+  .text {
+  	text-align: center;
+  }
+
+  /* 导航栏 */
+  ul.topnav {
+  	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	overflow: hidden;
+  	background-color: #FFFFFF;
+  }
+
+  ul.topnav li {
+  	float: left;
+  }
+
+  ul.topnav li a {
+  	display: block;
+  	color: black;
+  	text-align: center;
+  	padding: 1.5rem 2rem;
+  	text-decoration: none;
+  }
+
+  ul.topnav li a:hover {
+  	background-color: #808080;
+  }
+
+  ul.topnav li.right {
+  	float: right;
+  }
+
+  /* 自适应按钮 */
+  .photo img {
+  	float: left;
+  	width: 40%;
+  }
+
+  .intro {
+  	float: right;
+  }
+
+  .intro2 {
+  	float: right;
+  	font-size: 0
+  }
+
+  a:link {
+  	color: #742820;
+  	font-weight: bold;
+  	text-decoration: underline;
+  }
+
+  a:visited {
+  	color: #808080;
+  }
+
+  a:hover {
+  	color: #DF6090;
+  }
+
+
+
+  @media screen and (max-width: 750px) {
+
+  	ul.topnav li.right,
+  	ul.topnav li {
+  		float: none;
+  	}
+
+  	ul.topnav li a {
+  		padding: 0.4rem 0.4rem;
+  	}
+
+  	.photo img {
+  		width: 0;
+  	}
+
+  	.intro {
+  		float: right;
+  		font-size: 0
+  	}
+
+  	.intro2 {
+  		float: right;
+  		font-size: 1rem
+  	}
+
+  	.button {
+  		padding: 0rem 6rem;
+  	}
+  }
+
+  h2 {
+  	color: #161823
+  }
+
+  h1 {
+  	color: #161823
+  }
+
+  .title1 {
+  	font-weight: bold;
+  	font-size: 40px;
+  	color: #742820;
+  }
+  }

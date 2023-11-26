@@ -1,0 +1,181 @@
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	/* mobile 端切换横竖屏适配 */
+	-ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;
+	/* 渲染优化 */
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-size: 15px;
+}
+
+@media (min-width:767px) {
+	body {
+		margin: 0 15%;
+
+	}
+}
+
+a:link {
+	color: #040804;
+}
+
+a:visited {
+	color: #808080;
+}
+
+a:hover {
+	color: #0047A7;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+#photo {
+	max-width: 8rem;
+	width: 25%;
+	float: right;
+}
+
+.title1 {
+	font-weight: bold;
+	font-size: 40px;
+	color: #742820;
+}
+
+
+.button {
+	border: none;
+	padding: 0.9rem 2rem;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 1rem;
+	margin: 0.08rem 0.04rem;
+	-webkit-transition-duration: 0.4s;
+	/* Safari */
+	transition-duration: 0.4s;
+	cursor: pointer;
+	border-radius: 3px
+}
+
+.button {
+	background-color: white;
+	color: black;
+	border: 2px solid #000000;
+}
+
+.button:hover {
+	background-color: #000000;
+	color: white;
+}
+
+span {
+	font-size: 2.7rem;
+	font-family: algerian, courier;
+	line-height: 100%;
+	color: #742820;
+}
+        a:link {
+            color: #040804;
+        }
+
+        a:visited {
+            color: #808080;
+        }
+
+        a:hover {
+            color: #0047A7;
+        }
+
+
+        img {
+            max-widtht: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+
+        .title {
+            font-weight: bold;
+            font-size: 40px;
+            color: #742820;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            /* Green */
+            border: none;
+            color: white;
+            padding: 0.9rem 2rem;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            margin: 0.08rem 0.04rem;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+            border-radius: 3px
+        }
+
+        .button {
+            background-color: white;
+            color: black;
+            border: 2px solid #000000;
+        }
+
+        .button:hover {
+            background-color: #000000;
+            color: white;
+        }
+
+        #base {
+            margin: 0 0 0 0;
+            padding: 0 0 0 0;
+            text-decoration: none;
+        }
+
+        /* 提示 */
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            border-bottom: 1px dotted black;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: 120px;
+            background-color: #959A9E;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 0;
+            position: absolute;
+            z-index: 1;
+            bottom: 100%;
+            left: 50%;
+            margin-left: -60px;
+
+            /* 淡入 - 1秒内从 0% 到 100% 显示: */
+            opacity: 0;
+            transition: opacity 1s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+
+
+
+        #tit {
+            color: #161823
+        }

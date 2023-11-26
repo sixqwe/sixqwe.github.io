@@ -1,0 +1,316 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<!-- 各种字体 -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Babylonica">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif Simplified Chinese">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+		<!-- js文件 -->
+
+		<script src="js/main.js"></script>
+		<!-- main -->
+		<title>固 北 阁 - 关 于 我</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/grid.css">
+
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	</head>
+	<body>
+		<!-- 调用外部文件 -->
+
+
+		<!-- 弹出版权声明 -->
+
+
+		<div id="popup">
+			<h2>版权声明</h2>
+			<p>除非特别注明，本站<b>所有文章</b>在<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"> CC BY-NC-SA 4.0
+				</a>协议下授权</p>
+			<p>您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p>
+			<button id="confirmButton">确认</button>
+		</div>
+		<script>
+			// 复制时显示版权声明
+			document.addEventListener('copy', function(event) {
+				var popup = document.getElementById('popup');
+				popup.style.display = 'block';
+				setTimeout(function() {
+					popup.style.opacity = '1'
+				}, 50)
+			});
+			document.getElementById('confirmButton').addEventListener('click', function() {
+				var popup = document.getElementById('popup');
+				popup.style.opacity = '0';
+				setTimeout(function() {
+					popup.style.display = 'none'
+				}, 300)
+			});
+
+			// JavaScript代码，实现滚轮横向滚动
+			window.addEventListener('load', function() {
+				const container = document.querySelector('.scrollable-container');
+				container.addEventListener('wheel', function(event) {
+					if (container.scrollWidth > container.clientWidth) {
+						event.preventDefault();
+						container.scrollLeft += event.deltaY;
+					}
+				});
+			});
+		</script>
+
+		<!-- 头部 -->
+		<main>
+			<header id="header">
+				<div style="height: 100px;"></div>
+				<div class="title ptitle" id="title">
+					<h1><a href="index.html" class="hoverlink">心 阁 - 关 于 我</a></h1>
+					<div class="flex">
+						<p id="p">我是什么</p>
+						<p id="nav">
+							<a href="index.html" class="hoverlink">首页</a>
+							<a href="about.html"
+								style="background-color: var(--geist-black); color: var(--geist-white);"
+								class="hoverlink">关于</a>
+							<a href="friends.html" class="hoverlink">友链</a>
+						</p>
+					</div>
+				</div>
+				<!-- 菜单结束 -->
+			</header>
+			<!-- 头部结束 正文开始 -->
+
+			<br>
+			<br>
+
+			<div class="sticky" style="top: 100px;z-index: 1">
+				<div class="scrollable-container">
+					<div class=" scrollable-content">
+						<div class="indexpostli">
+							<h1 id="y">生命章节——</h1>
+							<p style="text-align: right; font-size: 110;"><small>——我能懂了什么呢？</small></p>
+							<ul>
+								<li><a class="lihea" href="post/poem.html">壹 诗云</a> <small>一切起于情生长于文字</small></li>
+								<li><a class="lihea" href="post/write.html">贰 书写</a> <small>道阻且长行则将至</small></li>
+								<li><a class="lihea" href="post/love.html">叁 极道</a> <small>奉道者</small></li>
+								<li><a class="lihea" href="post/bleach.html">肆 死神</a> <small>久保带人</small></li>
+							</ul>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			<br>
+			<div>
+				<aside class="gray">
+					<div>
+						<div>#0.0.5 </div>
+						<div>10, 9, 2023</div>
+						<div>ABOUT ME</div>
+					</div>
+				</aside>
+				<div id="information">
+					<div id="info">
+						<div id="newpost">
+							<div>
+								<style>
+									::-webkit-scrollbar {
+										display: none;
+										/* Chrome Safari */
+									}
+
+									body {
+										font-family: HarmonyOS !important;
+									}
+
+									.buttonb {
+										background-color: var(--geist-background-color);
+										border: 2px solid var(--geist-black);
+										text-align: left;
+										padding: 1px;
+										border-radius: 0px;
+									}
+								</style>
+								<a class="newpost posthr" href="past.html">
+									<span class="span">sixqwe</span>
+									<ul>
+										<li>高二学生<small>&nbsp;SHENYANG</small></li>
+										<li>追寻过<small>&nbsp;有一些想做的事，做了一些</small></li>
+
+									</ul>
+									<p style="text-align: right;">/truttty</p>
+								</a>
+								<br>
+								<a class="newpost posthr" href="friends.html">
+									<span class="span">碎白</span>
+									<small>文字。我们能多么轻易的触碰到文字，我们有多么轻易的创造文字。我来记录你的独白，我们来写一篇最薄的书。
+
+										<p>活了多少年，见了多少事，写了多少字。</p>
+										<p>也曾思索过此站意义。但我想，只要人们倾注感情就一定会在某时刻被领会的。我们的世界不就是观点冲刷吗？</p>
+										<br>
+									</small>
+									<p>这是一个项目，一个草稿，你可以把此刻最想说的一句话通过邮件发给我</p>
+								</a>
+
+								<br>
+								<br>
+							</div>
+							<div>
+								<a class="newpost hogwarts" href="about.html" style="overflow-y:auto;">
+									<span>联系方式</span>
+									<p><em>微信：</em>truttty </p>
+									<p><em>qq：</em>1900663242</p>
+									<p><em>邮箱：</em>1900663242@qq.com</p>
+
+									</p>
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			</div>
+			</div>
+			<style>
+				#aboutmaina1 {
+					margin-top: 5vh;
+					height: 40vh;
+				}
+
+				@media (min-height:767px) {
+					#aboutmaina1 {
+						height: 60vh;
+					}
+
+				}
+
+				#aboutmain {
+
+					display: grid;
+					grid-template-columns: 160px 1fr;
+				}
+
+
+
+				@media (min-width:767px) {
+					#aboutmain {
+						margin-left: 2vw;
+					}
+
+
+				}
+
+				@media (min-width:1400px) {
+					#aboutmain {
+						margin-left: 5vw;
+					}
+
+
+
+				}
+
+				.fav {
+					font-family: 'Courier New', Courier, monospace;
+				}
+
+				.fav div {
+					margin: 0 0 0 30px;
+				}
+
+				.fav code {
+					background-color: rgba(27, 31, 35, .05);
+				}
+
+				.fav li {
+					margin: 25px;
+				}
+
+
+				/* 箭头 */
+				@-webkit-keyframes bounce-up {
+					25% {
+						-webkit-transform: translateY(4px);
+					}
+
+					50%,
+					100% {
+						-webkit-transform: translateY(0);
+					}
+
+					75% {
+						-webkit-transform: translateY(-3px);
+					}
+				}
+			</style>
+
+			<div class="indexarrow">
+				<svg class="home_arrow bou" width="39" height="16" viewBox="0 0 39 16" fill="none"
+					xmlns="http://www.w3.org/2000/svg">
+					<path d="M2 2L19.5 14L37 2" stroke="#A0A0A0" stroke-width="3" stroke-linecap="round"
+						stroke-linejoin="round"></path>
+				</svg>
+			</div>
+
+
+			<h2 class="peo_box2 peo_box">最喜欢的...</h2>
+			<div class="fav">
+				<li class="peo_box3 peo_box"><strong>最喜欢的颜色</strong>：<code>黑</code> <code>灰</code> <code>白</code></li>
+				<li class="peo_box4 peo_box"><strong>最喜欢的书</strong>：
+					<div>网文：<code>蛊真人</code> <code>道诡异仙</code> <code>无限恐怖</code><br>
+						实体：<code>瓦尔登湖</code> <code>三体</code> <code>局外人</code><code>人间失格</code>
+						<code>解忧杂货店</code>
+					</div>
+				</li>
+				<li class="peo_box5 peo_box"><strong>最喜欢的乐队</strong>：<code>万能青年旅店</code> <code>草东没有派对</code>
+					<code>痛仰乐队</code> <code>deca joins</code> <code>惘闻</code>
+				</li class="peo_box6 peo_box">
+				<li class="peo_box7 peo_box"><strong>最喜欢的电影</strong>：<code>咒</code>
+					<code>新世纪福音战士新剧场版</code>
+					<code>黑客帝国</code>
+					<code>教父2</code>
+				</li>
+				<li class="peo_box8 peo_box"><strong>最喜欢的游戏</strong>： <code>死神vs火影 3.8</code> </li>
+				<li class="peo_box9 peo_box"><strong>最喜欢的动画</strong>： <code>EVA</code> <code>死神</code>
+					<code>进击的巨人</code>
+				</li>
+
+				<br>
+			</div>
+			<br><br>
+			<div class="peo_box4 peo_box" style="text-align: right; font-weight: bold;height: 10vh;">
+				<span>※ 全站采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 CN
+					</a>进行许可<br>
+					© 2022-2023<a id="a" href="/about.html"> 心阁</a>｜<a href="../index.html">回到首页</a>
+				</span>
+			</div>
+
+			<script>
+				//首页逐渐显示
+				$(function() {
+					$(document).on('scroll', function() {
+						var h = $(window).scrollTop();
+						var maxh = $(document).height();
+						var currh = $(window).height();
+						var num = Math.ceil((h - 100) / 100);
+						var str = ".peo_box" + num;
+						if (h > 100 && h < (maxh - currh - 1)) {
+							$(str).addClass('lishow')
+						} else if (h >= (maxh - currh - 1)) {
+							$('.peo_box').addClass('lishow')
+						} else {
+							$('.peo_box').removeClass('lishow')
+						}
+					})
+				});
+			</script>
+		</main>
+	</body>
+</html>

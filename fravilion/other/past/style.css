@@ -1,0 +1,252 @@
+:root {
+	--geist-background-color: #FFFFFF;
+	--geist-important: #637694;
+	--geist-importa: #435D5A;
+	--geist-black: #405A73;
+	--geist-gray2: #CCC;
+	--geist-gray: #555;
+	--geist-font: #051010;
+	--info-black: #304852;
+	--geist-white: #FFFFFF;
+	--background-dark: #435D5A;
+}
+
+div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+}
+
+body {
+	margin: 0 5%;
+	font-size: 90%;
+
+}
+
+p {
+	color: var(--geist-font);
+}
+
+main {
+	display: block;
+	width: 60% !important;
+	margin: 0 15% !important;
+}
+
+
+@media (max-width: 767px) {
+	main {
+		margin: 0 1% !important;
+		width: 98% !important;
+	}
+
+
+}
+
+
+img {
+	width: 100%
+}
+
+#main h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold;
+	color: var(--geist-font);
+	background-color: var(--geist-background-color);
+}
+
+#h {
+	font-weight: bold;
+	font-size: 100%;
+}
+
+#post h1,
+h2,
+h3,
+h4 {
+	transition: 1s;
+	transition-timing-function: cubic-bezier(0.1, 1.5, 0.4, 0.9);
+	border-radius: 4px;
+}
+
+#post h1:hover {
+	background-color: var(--geist-black);
+	color: var(--geist-white);
+}
+
+#post h1:hover:before {
+	content: "# ";
+}
+
+#post h2:hover {
+	background-color: var(--geist-black);
+	color: var(--geist-white);
+}
+
+#post h2:hover:before {
+	content: "#2 ";
+}
+
+#post h3:hover {
+	background-color: var(--geist-black);
+	color: var(--geist-white);
+}
+
+#post h3:hover:before {
+	content: "#3 ";
+}
+
+#post h4:hover {
+	background-color: var(--geist-black);
+	color: var(--geist-white);
+}
+
+#post h4:hover:before {
+	content: "#4 ";
+}
+
+#main article,
+aside,
+footer,
+header,
+nav,
+section {
+	display: block
+}
+
+a:link {
+	color: var(--geist-importat);
+	text-decoration: none;
+}
+
+a:visited {
+	color: var(--geist-importat);
+	text-decoration: none;
+}
+
+
+
+#logo {
+	color: var(--geist-font);
+	font-size: 3em
+}
+
+#logo img {
+	max-height: 64px
+}
+
+.description {
+	font-weight: bold;
+	margin: .5em 0 0 .1em;
+	color: var(--geist-gray)
+}
+
+.l {
+	color: var(--geist-black);
+	margin-top: 100px;
+	writing-mode: vertical-rl;
+}
+
+.log {
+	color: var(--geist-black);
+	position: fixed;
+	top: 3em;
+	right: 0;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+
+/*定义滚动条*/
+::selection {
+	color: var(--geist-white);
+	background: var(--geist-black);
+}
+
+::-webkit-scrollbar {
+	width: 10px;
+
+}
+
+::-webkit-scrollbar-track {
+	background-color: var(--geist-background-color);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: var(--geist-black);
+}
+
+/* 结束 */
+
+
+/*弹出版权声明样式 */
+#popup {
+	position: fixed;
+	top: 30vh;
+	left: 50%;
+	transform: translateX(-50%);
+	padding: 15px;
+	background-color: #f9f9f9;
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	max-width: 500px;
+	display: none;
+	opacity: 0;
+	transition: opacity 0.3s ease-in-out;
+}
+
+#confirmButton {
+	margin-top: 15px;
+	cursor: pointer;
+	padding: 10px 20px;
+	background-color: #222;
+	color: white;
+	border: none;
+	border-radius: 4px;
+}
+
+/*样式结束 */
+
+
+/* 上面 */
+.plistlink {
+	display: inline-block;
+	transition: 1s;
+	transition-timing-function: cubic-bezier(0.1, 1.5, 0.4, 0.9);
+}
+
+.plistlink:hover {
+	transform: translateY(1.5em);
+}
+
+/* 新增的CSS样式 */
+.post-content {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+.post-date {
+	font-size: 16px;
+	font-weight: 400;
+	width: 100px;
+	/* 调整日期宽度，根据实际需要调整 */
+	margin-right: 30px;
+	/* 调整日期和标题之间的间距 */
+}
+
+.post-title {
+	display: inline-block;
+	margin: 0 0 0 -30px;
+	font-size: 1.3em;
+	font-weight: bold;
+	line-height: 3;
+	/* 调整标题的行高，使其竖直对齐 */
+
+}
+
+#post {
+	margin: 0 5%;
+}

@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+		<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><!-- 各种字体 -->
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Babylonica">
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Noto Serif Simplified Chinese">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+		<!-- js文件 -->
+		<script src=js/main.js></script><!-- main -->
+		<title>固 北 阁 - 过 往</title>
+		<link rel=stylesheet href=css/style.css>
+		<link rel=stylesheet href=css/grid.css>
+		<link rel="shortcut icon" href=favicon.ico type="image/x-icon">
+		<style type=text/css>
+		</style>
+	<body>
+		<!-- 调用外部文件 -->
+		<!-- 弹出版权声明 -->
+		<div id=popup>
+			<h2>版权声明</h2>
+			<p>除非特别注明，本站<b>所有文章</b>在<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY-NC-SA
+					4.0</a>协议下授权</p>
+			<p>您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p><button id=confirmButton>确认</button>
+		</div>
+		<script>
+			document.addEventListener("copy", function() {
+				var e = document.getElementById("popup");
+				e.style.display = "block", setTimeout(function() {
+					e.style.opacity = "1"
+				}, 50)
+			}), document.getElementById("confirmButton").addEventListener("click", function() {
+				var e = document.getElementById("popup");
+				e.style.opacity = "0", setTimeout(function() {
+					e.style.display = "none"
+				}, 300)
+			}), window.addEventListener("load", function() {
+				const e = document.querySelector(".scrollable-container");
+				e.addEventListener("wheel", function(t) {
+					e.scrollWidth > e.clientWidth && (t.preventDefault(), e.scrollLeft += t.deltaY)
+				})
+			});
+		</script>
+
+
+
+		<main>
+			<!-- 头部 -->
+
+			<header id="header">
+				<div style="height: 100px;"></div>
+				<div class="title ptitle" id="title">
+					<h1><a href="index.html" class="hoverlink">心 阁</a></h1>
+					<div class="flex">
+						<p id="p">我的 跳动 流淌</p>
+						<p id="nav">
+							<a href="index.html" style="background-color: var(--geist-black); color: var(--geist-white);"
+								class="hoverlink">首页</a>
+							<a href="about.html" class="hoverlink">关于</a>
+							<a href="friends.html" class="hoverlink">友链</a>
+						</p>
+					</div>
+				</div>
+				<!-- 菜单结束 -->
+			</header>
+			<style>
+				header {
+					font-family: HarmonyOS !important;
+				}
+
+				body {
+					font-family: 'Courier New', Courier, monospace;
+
+				}
+
+				.l {
+					margin-top: 100px;
+					writing-mode: vertical-rl;
+				}
+
+				.ononon {
+					border: 10px solid var(--info-black);
+					color: var(--shadow);
+					padding: 0.6em;
+					height: 28.2vh;
+				}
+			</style>
+			<!-- 底部 -->
+			<style type="text/css">
+				.buttonpast {
+					display: inline-block;
+					padding: 0rem 0rem;
+					margin: 0.08rem 0.04rem;
+					-webkit-transition-duration: 0.4s;
+					border-radius: 4px;
+					background-color: #F0F0F0;
+					color: var(--geist-black);
+					border: 3px solid #161010;
+
+				}
+
+				#tit {
+					font-size: 170%;
+					font-weight: bold;
+				}
+
+				.buttonpast:hover {
+					background-color: #161823;
+					color: var(--geist-white);
+
+				}
+
+				.scrollable-content {
+					width: 0px;
+				}
+			</style>
+			<h1 style="font-family: 'Noto Serif SC', serif;">部分作品/更多详见<a href="/friends.html">我的站点</a></h1>
+
+			<a href="other/MUS/innerindex.html">
+				<button class="buttonpast">
+					<div><img style="width: 160px;border-radius: 10px;" src="img/mus.png"></div>
+
+
+					<span id="tit">MUS服务器</span><br>
+					<span>我写的第一个网站</span>
+
+				</button></a>
+
+			<a href="other/pazzle/index.html">
+				<button class="buttonpast">
+					<div><img style="width: 183px;border-radius: 10px;" src="other/pazzle/tang.jpg"></div>
+
+
+					<span id="tit">海 龟 汤</span><br>
+					<span>玩闹的东西</span>
+
+				</button></a>
+
+			<div class="scrollable-container">
+				<div class="l">
+
+					<div class="scrollable-content">
+
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/09.01</span>
+								<a class="plistlink" itemprop="url" href="other/past/7.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;固·北·国</span>
+								</a>
+							</div>
+						</article>
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/08-19</span>
+								<a class="plistlink" itemprop="url" href="other/past/6.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;悲哀</span>
+								</a>
+							</div>
+						</article>
+
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/07-16</span>
+								<a class="plistlink" itemprop="url" href="other/past/5.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;结束于此</span>
+								</a>
+							</div>
+						</article>
+
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/07-16</span>
+								<a class="plistlink" itemprop="url" href="other/past/4.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;漂泊者</span>
+								</a>
+							</div>
+						</article>
+
+
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/06-14</span>
+								<a class="plistlink" itemprop="url" href="other/past/3.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;我一个人望向未来的交汇点。</span>
+								</a>
+							</div>
+						</article>
+
+
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">贰〇贰叁/04-19</span>
+								<a class="plistlink" itemprop="url" href="other/past/2.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;记录 二</span>
+								</a>
+							</div>
+						</article>
+
+						<br>
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">贰〇贰贰/10-04</span>
+								<a class="plistlink" itemprop="url" href="other/past/1.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;记录 一</span>
+								</a>
+							</div>
+						</article>
+
+						<br>
+						<article class="post">
+							<div class="post-content">
+								<span class="post-date">贰〇贰壹/05-22</span>
+								<a class="plistlink" itemprop="url" href="other/past/0.html">
+									<span class="post-title" itemprop="name headline">&nbsp;&nbsp;原本</span>
+								</a>
+							</div>
+						</article>
+
+
+						<div style="margin-right: 10vw;" class="title ptitle">
+							<span style="font-size: 200%;">二〇二一 / 二〇二三 </span>
+							<div class=flex>
+								<p>等到 一遍遍 雕刻 磨平了 悲伤</p>
+							</div>
+							<a style="font-size: 300%;font-family: 'Noto Serif SC', serif;" href="/fravilion/index.html"
+								class=hoverlink><strong>石
+									刻</strong></a>
+
+							<a style="margin-top: 20px; font-family: 'Noto Serif SC', serif;"
+								href="/fravilion/index.html">固 北
+								阁</a>&nbsp;一
+							已运行 <b id="blog_running_days"></b> days
+						</div><!-- 菜单结束 -->
+
+						<br>
+
+
+						<script>
+							var blog_running_days = document.getElementById("blog_running_days");
+
+							function refresh_blog_running_time() {
+								var time = new Date() - new Date(2022, 1, 15);
+								var d = parseInt(time / 24 / 60 / 60 / 1000);
+								blog_running_days.innerHTML = d;
+							}
+							refresh_blog_running_time();
+							if (typeof(bottomTimeIntervalHasSet) == "undefined") {
+								var bottomTimeIntervalHasSet = true;
+								setInterval(function() {
+									refresh_blog_running_time();
+								}, 500);
+							}
+						</script>
+						<style>
+							.plistlink {
+								display: inline-block;
+								transition: 1s;
+								transition-timing-function: cubic-bezier(0.1, 1.5, 0.4, 0.9);
+							}
+
+							.plistlink:hover {
+								transform: translateY(1.5em);
+							}
+
+							/* 新增的CSS样式 */
+							.post-content {
+								display: table-cell;
+								vertical-align: middle;
+							}
+
+							.post-date {
+								font-size: 16px;
+								font-weight: 400;
+								width: 100px;
+								/* 调整日期宽度，根据实际需要调整 */
+								margin-right: 30px;
+								/* 调整日期和标题之间的间距 */
+							}
+
+							.post-title {
+								display: inline-block;
+								margin: 0 0 0 -30px;
+								font-size: 1.3em;
+								font-weight: bold;
+								line-height: 3;
+								/* 调整标题的行高，使其竖直对齐 */
+
+							}
+
+							#post {
+								margin: 0 5%;
+							}
+						</style>
+
+					</div>
+	</body>

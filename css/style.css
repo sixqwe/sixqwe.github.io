@@ -1,0 +1,108 @@
+		:root {
+			--geist-background-color: #FFFFFF;
+			--background-dark: #435D5A;
+			--background-blue: rgba(48, 72, 80, 0.2);
+			--geist-important: #637694;
+			--geist-importa: #435D5A;
+			--geist-black: #405A73;
+			--geist-gray2: #CCC;
+			--geist-gray: #555;
+			--geist-font: #051010;
+			--info-black: #304852;
+			--geist-white: #FFFFFF;
+			--black: #000000;
+		}
+
+		::-webkit-scrollbar {
+			display: none;
+			/* Chrome Safari */
+		}
+
+		* {
+			font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+		}
+
+		a {
+			color: var(--geist-important);
+			text-decoration: none;
+		}
+
+		a:hover {
+			text-decoration-line: underline;
+			color: var(--geist-black);
+		}
+
+		/* 状态四: 被点击的链接 */
+		a:active {
+
+			color: var(--info-black);
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.blue {
+			background-color: var(--background-blue);
+
+		}
+
+		.two {
+			display: grid;
+		}
+
+		.wushig {
+			grid-template-columns: repeat(1, 1fr) 50%;
+		}
+
+		.huangjing {
+			grid-template-columns: repeat(1, 1fr) 38%;
+		}
+
+		img {
+			max-width: 100%;
+		}
+
+
+
+		/* 横 */
+
+		.indexpost {
+			display: inline-block;
+			background-color: var(--background-blue);
+			font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+		}
+
+		.indexpost .rl {
+			writing-mode: vertical-rl;
+		}
+
+		.indexpost .lr {
+			writing-mode: vertical-lr;
+		}
+
+		.indexpost ul {
+			list-style-type: none;
+		}
+
+
+		ol li,
+		figcaption p {
+			color: var(--geist-font);
+			font-size: .75rem;
+			line-height: 1.5rem;
+			font-family: 'Source Serif 4', 'Noto Serif SC', serif;
+			font-variation-settings: 'opsz'8;
+		}
+
+		.indexpost a {
+			text-decoration: none;
+			color: var(--geist-black);
+		}
+
+		@media (max-width:767px) {
+
+			.two {
+				display: block;
+			}
+		}

@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+		<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><!-- 各种字体 -->
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Babylonica">
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Noto Serif Simplified Chinese">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+		<!-- js文件 -->
+		<script src=js/main.js></script>
+		<title>固 北 阁 - 过 往</title>
+		<link rel="stylesheet" href="style.css">
+
+		<link rel="shortcut icon" href=../../favicon.ico type="image/x-icon">
+		<style type=text/css>
+		</style>
+	<body>
+		<div id=popup>
+			<h2>版权声明</h2>
+			<p>除非特别注明，本站<b>所有文章</b>在<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY-NC-SA
+					4.0</a>协议下授权</p>
+			<p>您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p><button id=confirmButton>确认</button>
+		</div>
+		<script>
+			document.addEventListener("copy", function() {
+				var e = document.getElementById("popup");
+				e.style.display = "block", setTimeout(function() {
+					e.style.opacity = "1"
+				}, 50)
+			}), document.getElementById("confirmButton").addEventListener("click", function() {
+				var e = document.getElementById("popup");
+				e.style.opacity = "0", setTimeout(function() {
+					e.style.display = "none"
+				}, 300)
+			}), window.addEventListener("load", function() {
+				const e = document.querySelector(".scrollable-container");
+				e.addEventListener("wheel", function(t) {
+					e.scrollWidth > e.clientWidth && (t.preventDefault(), e.scrollLeft += t.deltaY)
+				})
+			});
+		</script>
+
+		<!-- 头部 -->
+
+		<style>
+			header {
+				font-family: 'Courier New', Courier, monospace;
+				margin: 0 5%;
+				font-size: 90%;
+
+			}
+
+			.ononon {
+				border: 10px solid var(--info-black);
+				color: var(--shadow);
+				padding: 0.6em;
+				height: 28.2vh;
+			}
+
+			.buttonpast {
+				display: inline-block;
+				padding: 0rem 0rem;
+				margin: 0.08rem 0.04rem;
+				-webkit-transition-duration: 0.4s;
+				border-radius: 4px;
+				background-color: #F0F0F0;
+				color: var(--geist-black);
+				border: 3px solid #161010;
+
+			}
+
+			#tit {
+				font-size: 170%;
+				font-weight: bold;
+			}
+
+			.buttonpast:hover {
+				background-color: #161823;
+				color: var(--geist-white);
+
+			}
+
+			@media (min-width: 767px) {
+				.log {
+					position: fixed;
+					top: 6em;
+					right: 10%;
+
+				}
+
+				header {
+					font-family: 'Courier New', Courier, monospace;
+					margin: 0 10%;
+					font-size: 80%;
+
+				}
+			}
+		</style>
+
+		<div id="headergbg">
+			<div class="site-name col-mb-12 col-9">
+				<a id="logo" href="../../past.html"><b>固 北 阁</b></a>
+				<p class="description">石刻</p>
+			</div>
+		</div>
+
+		<header>
+
+			<div class="l">
+				<div>
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/09.01</span>
+							<a class="plistlink" itemprop="url" href="7.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;固·北·国</span>
+							</a>
+						</div>
+					</article>
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/08-19</span>
+							<a class="plistlink" itemprop="url" href="6.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;悲哀</span>
+							</a>
+						</div>
+					</article>
+
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/07-16</span>
+							<a class="plistlink" itemprop="url" href="5.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;结束于此</span>
+							</a>
+						</div>
+					</article>
+
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/07-16</span>
+							<a class="plistlink" itemprop="url" href="4.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;漂泊者</span>
+							</a>
+						</div>
+					</article>
+
+
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;/06-14</span>
+							<a class="plistlink" itemprop="url" href="3.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;前望&nbsp;—〇</span>
+							</a>
+						</div>
+					</article>
+
+
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">贰〇贰叁/04-19</span>
+							<a class="plistlink" itemprop="url" href="2.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;记录 二</span>
+							</a>
+						</div>
+					</article>
+
+					<br>
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">贰〇贰贰/10-04</span>
+							<a class="plistlink" itemprop="url" href="1.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;记录 一</span>
+							</a>
+						</div>
+					</article>
+
+					<br>
+					<article class="post">
+						<div class="post-content">
+							<span class="post-date">贰〇贰壹/05-22</span>
+							<a class="plistlink" itemprop="url" href="0.html">
+								<span class="post-title" itemprop="name headline">&nbsp;&nbsp;原本</span>
+							</a>
+						</div>
+					</article>
+				</div>
+			</div>
+			<ul class="log">
+				<li><a href="#cl-1">过去的序</a></li>
+				<li><a href="#cl-2">统一</a></li>
+				<li><a href="#cl-3">命若</a></li>
+				<li><a href="#cl-4">5月某日街上正午漫步</a></li>
+				<li><a href="#cl-5">遗忘之王</a></li>
+				<li><a href="#cl-6">爱</a></li>
+				<li><a href="#cl-7">瓦合</a></li>
+				<li><a href="#cl-9">打</a></li>
+				<li><a href="#cl-10">飞</a></li>
+				<li><a href="#cl-11">七记</a>
+					<ul>
+						<li><a href="#cl-12">6月8日</a></li>
+						<li><a href="#cl-13">6月9日</a></li>
+						<li><a href="#cl-14">6月10日</a></li>
+						<li><a href="#cl-15">6月11日</a></li>
+						<li><a href="#cl-16">6月12日</a></li>
+						<li><a href="#cl-17">6月14日</a></li>
+						<li><a href="#cl-18">6月15</a></li>
+					</ul>
+				</li>
+			</ul>
+<hr>
+
+
+			<script>
+				var blog_running_days = document.getElementById("blog_running_days");
+
+				function refresh_blog_running_time() {
+					var time = new Date() - new Date(2022, 1, 15);
+					var d = parseInt(time / 24 / 60 / 60 / 1000);
+					blog_running_days.innerHTML = d;
+				}
+				refresh_blog_running_time();
+				if (typeof(bottomTimeIntervalHasSet) == "undefined") {
+					var bottomTimeIntervalHasSet = true;
+					setInterval(function() {
+						refresh_blog_running_time();
+					}, 500);
+				}
+			</script>
+
+
+
+		</header>
+
+		<main>
+			<div class="site-name">
+				<div id="main" role="main">
+					<article class="post" itemscope="" itemtype="http://schema.org/BlogPosting">
+						<div style="color:var(--geist-black);" id="post" class="post-content" itemprop="articleBody">
+							<div id="wen">
+								<!--more-->
+								<h2 id="过去的序"><a name="cl-1"></a>过去的序</h2>
+								<p>我这个人喜怒无常，多愁善感。</p>
+								<p>有时候很平静，有时候怒意让我不能控制。</p>
+								<p>说实话，这段话可以说是写给我自己的，也可以说写给所有人的，又或者是写给一类人的。</p>
+								<p>我命名为《如何应对情绪波动》</p>
+								<p>我们没有任何资格要求你</p>
+								<p>每天追求那种优越与存在，可是不追求这些还能追求什么。</p>
+								<p>为什么我会喜欢这些。</p>
+								<p>为什么生活一定要独特。</p>
+								<p>为什么写下来的东西不能平淡。</p>
+								<p>为什么平日荒诞的生活就是平淡。</p>
+								<p>为什么语言永远都无法描述。</p>
+								<p>为什么要被形式限制。</p>
+								<p>越了解就越远，在这些框架里面摸爬。</p>
+								<p>在每个夜晚想象在未来后悔的自己，然后下定决心。</p>
+								<p>最后又是被网上的新闻击垮。</p>
+								<p>或许这世上一切都是假的，但是我是真的。</p>
+								<p>我那灵魂和瘦弱的身体合为一体。</p>
+								<p>张开双手好像十字。</p>
+								<p>可是我不过是一个凡人，在睡前让思绪飘荡。</p>
+								<p>太多事情没做，我也逐渐在别人的影子下活出自己。</p>
+								<p>我想要...</p>
+								<p>啧。</p>
+								<p>我想要隐藏内心的欲望。</p>
+								<p>不服就写吧。</p>
+								<p>是不是，不用去想就够了呢。</p>
+								<p>吃着淘宝的面包和鸡胸肉，三块钱一顿饭。</p>
+								<p>买来的书压在箱底掏出练习册。</p>
+								<p>全身14元的我漫步在街头，没有过程只有目标。</p>
+								<p>爱与疼痛，不惧茫茫道路长。</p>
+								<p>可是爱你想你忘记你</p>
+								<p>在这生冥长梦中不能自己</p>
+								<p>早上看到薛佳慧带来一微单就突然陷入惆怅。</p>
+								<p>我想要，但是明白就算拥有也不能改变什么</p>
+								<p>我觉得只要自己也带来相机也会像这样受欢迎</p>
+								<p>我觉得如果自己表现喜欢摄影就能更近一些</p>
+								<p>但是我明明理解却又碍于一切不敢说话。</p>
+								<p>更何况拿不出钱。</p>
+								<p>有趣的东西买了很多 人也没有变有趣</p>
+								<p>将自我剖析干净才发现连空无躯壳都不如</p>
+								<p>只要封闭假装不存在一切都会好起来的吧</p>
+								<p>音乐。</p>
+								<p>喜欢着喜欢，讨厌着喜欢。</p>
+								<p>只要这么做就能有朋友吧</p>
+								<p>只要这样就能靠近吧</p>
+								<p>可是都好讨厌。</p>
+								<p>呐喊的鬼</p>
+								<hr>
+								<h2 id="统一"><a name="cl-2"></a>统一</h2>
+								<p>前人言明 你所坚守毫无意义 </p>
+								<p>言明 如一方可成功 </p>
+								<p>人情世故 万物虚无 </p>
+								<p>时间通路 内心泪水 </p>
+								<p>文字本为破碎符号 </p>
+								<p>黑发红旗，东方泪水更进一步 </p>
+								<p>四面成雨 逆流遮天 长眠。</p>
+								<p>我在其中苏醒 </p>
+								<p>都丢给过去吧 一无所有。</p>
+								<p>一天。生死疲劳绚烂烟火 </p>
+								<p>我的梦想无足 </p>
+								<p>生长，苏醒 </p>
+								<p>无足鸟化作雨水 遮天蔽日。</p>
+								<p>第一次睁开眼。 </p>
+								<p>尸山血海，微风吹拂 </p>
+								<p>我相信，我相信这世界如此 </p>
+								<p>刀剑吞吐，爱意汹涌，眺望远方 </p>
+								<p>无法控制四肢的我笑容满面 望向革命。</p>
+								<hr>
+								<h2 id="命若"><a name="cl-3"></a>命若</h2>
+								<p>(假如有一天我能对你说) ——予武俊圻，一切我所爱的人和后来者。</p>
+								<p>不要奢望改变 无雨细雨，大地璀璨如烟火 </p>
+								<p>人生平等四季平衡 </p>
+								<p>无思 唯有当下 </p>
+								<p>咒梦，中庸曼妙，凤凰于飞</p>
+								<p>你必是你 咫尺天涯 </p>
+								<p>无足鸟落地 腐朽生根。</p>
+								<p>黑伞 情意朦胧。</p>
+								<hr>
+								<h2 id="5月某日街上正午漫步"><a name="cl-4"></a>5月某日街上正午漫步</h2>
+								<p>只要是两个人一起走在街上就已经超越了很多人了 </p>
+								<p>这是哪里，我对距离的判断能力已经模糊了。 </p>
+								<p>三十分钟，认不出周围的一切事物。 </p>
+								<p>讨厌人多，但是不讨厌人多的公园。</p>
+								<hr>
+								<h2 id="遗忘之王"><a name="cl-5"></a>遗忘之王</h2>
+								<p>高歌的极北之地中是无限轻柔的发丝 死亡方得太平</p>
+								<hr>
+								<h2 id="爱"><a name="cl-6"></a>爱</h2>
+								<p>我想住一个什么样的房子呢？能不能只租一个房间，装上隔音棉，带上书和电脑体会自我，或者开一间小杂货店，不在现实开业。 </p>
+								<p>好像…..需要收入，那就要工作。</p>
+								<p>可家是什么呢? 若我成了家…..怕是没有更多精力和钱住在我想住的地方了。 所以爱是喜欢和责任吗?</p>
+								<hr>
+								<h2 id="瓦合"><a name="cl-7"></a>瓦合</h2>
+								<p>我们….我们时代的文字是必然超越上一个时代的 养料人文各国瓦合 直到情感虚拟，直到强说秋凉。</p>
+								<hr>
+								<h2 id="打"><a name="cl-9"></a>打</h2>
+								<p>来自东方</p>
+								<p>从东方到南方</p>
+								<p>致密的石头 在火山口</p>
+								<p>土地里 是空气 </p>
+								<p>人 没有答案</p>
+								<p>海，和水</p>
+								<p>忘不掉的不知对错</p>
+								<p>睡眠是死者的宽慰</p>
+								<hr>
+								<h2 id="飞"><a name="cl-10"></a>飞</h2>
+								<p>回家太远了。去同学家也太远了。</p>
+								<p>从学校出来。好多人。没什么可说的。 不值得。 没见到。 见到也无话可说了。 靠脚步能走多远。</p>
+								<p>好多了。今天两次想死了。我也懒得说。 信与不信命只要知道就没有好结局。 又出去走了一个小时。 </p>
+								<p>好。 飞。</p>
+								<p>我为什么这么难受呢 原因说起来又老套又劣质 无非是想做的事情做不了 生活没有钱 烦恼想了又想又怕给人添乱，怕别人觉得矫情。</p>
+								<p>喜欢的人也不喜欢我 付出努力也不一定有结果 想做的事情也不知道对错 家里没有网 别人对我期望太高 </p>
+								<p>没有衣服，没有时间，没有目标，没有希望</p>
+								<hr>
+								<h2 id="七记"><a name="cl-11"></a>七记</h2>
+								<h3 id="6月8日"><a name="cl-12"></a>6月8日</h3>
+								<p>想出来走走，其实明白，可能是，可能不会变好。可能是这样子，也挺好的。 重视吗？不重视吧。后悔吗？后悔吧。 没什么好与不好，只是我曾经舍得花过时间。
+									可只要我想做一件事，脑中一定会出现相反的想法。</p>
+								<p>总觉得只有身体受伤了才有正当理由停下来。 一边害怕出意外，一边又觉得出意外是能够跳出当前循环的唯一途径</p>
+								<p>但是一切好像都是一种将要变好的状态</p>
+								<p>好像我喜欢的女孩子喜欢我就好了 好像放纵一次自己就好了 好像骑上自行车就好了 好像伸手碰到手机就好了 </p>
+								<p>但是她不喜欢我 多巴胺也不能根本改变 又没有骑车的体力 所以碰到手机了还是焦虑 </p>
+								<p>但是为什么一切都是一种要变好的状态？</p>
+								<h3 id="6月9日"><a name="cl-13"></a>6月9日</h3>
+								<p>世界不愿意给予我更多算力了。 除了走，好像我什么都不知道。你们说的话，我的一切行为，一切的事物，其实都是毒品。有什么是无害的呢？ </p>
+								<p>你说，你是人。其实你没说。 文字。人的情绪只会让文字情绪化。 困倦。 疯和奋斗。</p>
+								<p>年。 只有行动。肢体的行动。 </p>
+								<p>你说你无意义。 你说你无人注视。 那为何疯。 其实我想把话说明白的，但是没有太多主观动力去思考和整理。
+									再说，现在已经离不开音乐这种东西了。离开了会四肢无力没有目标，什么都不想干，只是头疼。 文字最是无力。
+									因为文字入门门槛最低，提升又极其困难。最上等的文字也只是激发人内心的情感或者是什么东西。 我明白我的脆弱。 我明白吗？ </p>
+								<p>你说，你我一样吗。 你也不想说了吧。 你说，你说，你说我说，我说不出。 用。 用是什么意思？</p>
+								<h3 id="6月10日"><a name="cl-14"></a>6月10日</h3>
+								<p>在乎你。这么长久的在乎你到底是什么意思。 只要感受到你就这样长久的自我疼痛下去。 这样痛苦下去。 我觉得自己爱着世界，可是我既没见过世界也不懂爱。 从那天起，一生早已
+									没注定。 你的期待是什么 我不想说枷锁。 人要相信自己多难。梦多简单。把现实当成梦来活多简单。 只要相信困难的事情有好的回报，一切就都会变好的。 可是让我怎么相信回报？
+									大风从东刮到西，从北刮到南。 新的一天正在来临。</p>
+								<h3 id="6月11日"><a name="cl-15"></a>6月11日</h3>
+								<p>你说，理性。 你说，我是神。 我只想坐在影子里。 我说，信息密度高是不好的。 你说，为什么？ 我沉默。 我说，痛苦。 你沉默。 我是壳。
+									我对他说，早一点好。自己却不知道对早些是后悔还是感激。 我说，现在你们自创的根本不叫意象，叫臆想和意淫。 我不说。 你来创造意象。 我说，我没经历过。 没有你。
+									痛苦的壳好像忘记了自己的理性，我漂浮在空气中刚刚想起我是我。 下次落笔重些。 什么时候开始和虚拟的你说？</p>
+								<p>求你，说话。 尽管我知道了。</p>
+								<h3 id="6月12日"><a name="cl-16"></a>6月12日</h3>
+								<p>我想说年在流血。<br> 可年真的会流血吗？<br> 那我的年和年…. 年存在吗？<br> 那整体的年还是我的年。<br> 人体内存在世界又怎么会是壳？</p>
+								<p>你们在说话，年在流血，我也停住了。 </p>
+								<p>我始终为人类的多样性发愁并深深的痛苦着。 我所掌握你未掌握的，你所掌握我未掌握的。 </p>
+								<p>受身。 </p>
+								<p>这样是否否定人类进步，如一是否能得安慰。 我因人类深深的发愁。</p>
+								<h3 id="6月14日"><a name="cl-17"></a>6月14日</h3>
+								<p>我们一辈子的好运够了吗？既不出生在达官之家不识人情冷暖，也未生于社会底层一生无知到死。
+									幸福又是因为受苦才存在。所以我们一生中无数大小磨难都找到了去处，就连死亡也只是为了造就更好的过程。 那这样就够了吗？这种因存在而顺从的想法就够了吗？
+									有这种想法不过是怕自己不再是自己而已。你记住了生命中的每一刻，所以害怕改变带来的蝴蝶效应，我们为了人类设计的好运是不能恩惠他人的。
+									这是一种好的思考，好的文字，这是他的善与我的渺小与恶，是我的疯狂与不知归途。</p>
+								<p>我不知道蒙古六月的草原上是否万物勃发，不知道是否有一片黑发。</p>
+								<p> 我没有海子的马儿，一切不过聊以慰藉。</p>
+								<h3 id="6月15"><a name="cl-18"></a>6月15</h3>
+								<p>我害怕人多。那种感受就像身体中延伸出无数无形的线，系在我与人，人与人，物与物与物与我之间，每次从线中穿过或者身体上线的一端被扯走，都有一种灵魂与身体一同丧失的感觉。
+									我的每一分努力，我们之间的每一次交谈和人与人之间的每一分差异都会使线上带有更大的能量，直到一次就足够让我精神不振。 好在这线不是时刻存在，我也能沉溺安逸中。</p>
+								<p>社团又能见到她了。 </p>
+								<p>“在吗？”</p>
+								<p> 如果她也带手机了的话</p>
+								<p>“干嘛” </p>
+								<p>“来旁边坐会”</p>
+								<p>这时候她可能会问“怎么了”吧。但我也不知道怎么了。</p>
+								<p>于是我会“就是坐会。”</p>
+								<p>她应该会答应我的吧。但来了能做什么？如果她一直看抖音我又不知道说什么，那就又是一节课了。如果我伸手摸摸她的头发她会是什么反应呢？</p>
+								<p>可能会笑着说：“你叫我就是为了摸我头发啊！”</p>
+								<p>现实是什么呢？不过是又一次看着你与两个好友走入教室。从你的正脸看到马尾，看着你的背影，看着你的笑容，戴上耳机一言不发。 </p>
+								<p>我心里只有了一种不知是本心还是借口的思想：自由 为了自由而不去想念你是高尚的吧。</p>
+								<p>人的灵魂是什么呢？大概是人本性中最为不堪和脆弱的部分组成的吧。 </p>
+								<p>想你想见你，在想见你的生冥长梦中不能自己。在想见你想见到不想见你的长梦中挣扎。</p>
+								<p>我想，文学教导是让我们为人处世更加真实光明的。 一直很讨厌像是现在受苦，未来享福这种话。谁能连续的活呢？ 一段思考结束后就又被一位继承了你的陌生人取代了。
+									为了他努力怎么会快乐呢？ 不行了，断了。一切都断了。看到你没法思考了。为什么，谁来说为什么？</p>
+
+							</div>
+
+						</div>
+
+					</article>
+
+				</div>
+
+				<!-- end #main-->
+				<br>
+
+			</div><!-- end .row -->
+			</div>
+
+			<!-- end #body -->
+
+
+			<footer id="footer">
+
+				<style>
+					#a {
+						color: black;
+						font-size: 1em;
+					}
+
+					#footer {
+						text-align: center;
+						padding-top: 1em;
+						height: 2em;
+						width: auto;
+						backdrop-filter: blur(10px)
+					}
+				</style>
+
+
+
+
+
+				<!-- 底部 -->
+				<span>
+					© 2022-2023&nbsp;<a id="a" href="https://fravilion.top/">固 北 阁</a> 已运行 <b id="blog_running_days"></b> days
+				</span>
+
+				<script>
+					var blog_running_days = document.getElementById("blog_running_days");
+
+					function refresh_blog_running_time() {
+						var time = new Date() - new Date(2022, 1, 15);
+						var d = parseInt(time / 24 / 60 / 60 / 1000);
+						blog_running_days.innerHTML = d;
+					}
+					refresh_blog_running_time();
+					if (typeof(bottomTimeIntervalHasSet) == "undefined") {
+						var bottomTimeIntervalHasSet = true;
+						setInterval(function() {
+							refresh_blog_running_time();
+						}, 500);
+					}
+				</script>
+			</footer><!-- end #footer -->
+			<div id="instantclick" style="opacity: 0;">
+				<div id="instantclick-bar" class="instantclick-bar" style="transform: translate(100%);"></div>
+			</div>
+	</body>
