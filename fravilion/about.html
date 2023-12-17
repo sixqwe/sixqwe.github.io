@@ -85,8 +85,8 @@
 				<div class="scrollable-container">
 					<div class="scrollable-content">
 						<div class="indexpostli">
-							<h1>一些共同的人</h1>
-							<p style="text-align: right;">和我站在一起</p>
+							<h1 class="fratitle">一些共同的人</h1>
+							<p style="text-align: right;"><small>和我站在一起</small></p>
 
 							<ul>
 								<li> <a href="https://www.wwdd.top" target="_blank" class="link-box">
@@ -120,8 +120,11 @@
 							<h1 id="y">章节——</h1>
 							<p style="text-align: right; font-size: 110;"><small>——我能懂了什么呢？</small></p>
 							<ul>
-								<li><a class="lihea" href="post/poem.html">壹 诗云</a> <small>一切起于情生长于文字</small></li>
-								<li><a class="lihea" href="post/bleach.html">贰 死神</a> <small>久保带人</small></li>
+								<li><a class="lihea" href="post/poem.html">壹 诗云</a> <small>一切起于情生长于文字</small>
+								</li>
+								<li><a class="lihea" href="post/bleach.html">贰 死神</a>
+									<small>久保带人</small>
+								</li>
 							</ul>
 
 						</div>
@@ -144,6 +147,29 @@
 							<div id="newpost">
 								<div>
 									<style>
+										.lihea {
+											font-size: 100%;
+
+										}
+.fratitle {
+												font-size: auto;
+											
+											}
+										@media (max-width:767px) {
+											.lihea {
+												font-size: 120%;
+											
+											}
+											.frtitle {
+												font-size: 180%;
+											
+											}
+											.fratitle {
+												font-size: 180%;
+											
+											}
+										}
+
 										::-webkit-scrollbar {
 											display: none;
 											/* Chrome Safari */
@@ -244,9 +270,6 @@
 					.fav li {
 						margin: 25px;
 					}
-
-
-
 				</style>
 
 
