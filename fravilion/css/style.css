@@ -12,12 +12,12 @@
 	--black: #000000;
 }
 
-    div.sticky {
-      position: -webkit-sticky;
-      position: sticky;
+div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
 
 
-    }
+}
 
 body {
 	background-color: var(--geist-background-color);
@@ -56,20 +56,29 @@ body {
 }
 
 /* 移动设备隐藏 */
-#y{
+#y {
 	display: auto;
 }
+
 @media (max-width: 767px) {
-#y{
-	display: none;
+	#y {
+		display: none;
+	}
 }
+
+#ty {
+	display: auto;
+}
+
+@media (min-width: 767px) {
+	#ty {
+		display: none;
+	}
 }
 
 
 @media screen and (prefers-color-scheme:dark) {
-	:root {
-
-	}
+	:root {}
 }
 
 hr {
@@ -159,12 +168,14 @@ main {
 	z-index: 1000;
 	background-image: linear-gradient(to bottom, rgba(253, 252, 250, 0.3), rgba(240, 240, 244, 0)60%);
 }
+
 @media (min-width: 767px) {
-#title {
-	color: var(--geist-font);
-	background-image: linear-gradient(to bottom, rgba(253, 252, 250, 0.1), rgba(240, 240, 244, 0)10%);
+	#title {
+		color: var(--geist-font);
+		background-image: linear-gradient(to bottom, rgba(253, 252, 250, 0.1), rgba(240, 240, 244, 0)10%);
+	}
 }
-}
+
 #title h1 {
 	margin: 0;
 	font-size: 3.5em !important;
@@ -252,7 +263,7 @@ main {
 }
 
 ::-webkit-scrollbar-track {
-	background-color:var(--geist-background-color);
+	background-color: var(--geist-background-color);
 }
 
 ::-webkit-scrollbar-thumb {
@@ -650,7 +661,7 @@ aside>div>div {
 
 /* 外层容器样式 */
 .scrollable-container {
-	width: 100vw;
+	width: 94vw;
 	overflow-x: auto;
 	/* 允许横向滚动 */
 	white-space: nowrap;
@@ -675,7 +686,7 @@ aside>div>div {
 	/* 内容换行 */
 	/* 设置横向滚动内容的宽度 */
 	width: auto;
-	
+
 	/* 这里的宽度可以根据你的内容需要进行调整 */
 }
 
@@ -700,7 +711,7 @@ figcaption p {
 	font-size: .75rem;
 	line-height: 1.5rem;
 	font-family: 'Source Serif 4', 'Noto Serif SC', serif;
-	font-variation-settings: 'opsz'8;
+	font-variation-settings: 'opsz' 8;
 }
 
 .indexpostli a {
@@ -709,7 +720,32 @@ figcaption p {
 
 @media (max-width:767px) {
 	.indexpostli {
+		background-color: var(--geist-background-color);
 		writing-mode: initial;
+	}
+
+	.indexpostli .button a {
+		text-align: center;
+		display: block;
+		padding: 1em auto;
+		font-size: 1rem;
+		margin: 0.08rem 0.04rem;
+		-webkit-transition-duration: 0.4s;
+		border-radius: 4px;
+		background-color: #F0F0F0;
+		color: black;
+		border: 3px solid #17181d;
+		margin: 1em;
+	}
+
+	.indexpostli .button ul {
+padding-left: 0;
+		text-align: center;
+	}
+
+	.indexpostli a:hover {
+		background-color: #161823;
+		color: white;
 	}
 
 	.scrollable-content {
@@ -717,7 +753,7 @@ figcaption p {
 		white-space: normal;
 		/* 内容换行 */
 		/* 设置横向滚动内容的宽度 */
-		width:92.5vw;
+		width: 92.5vw;
 		/* 这里的宽度可以根据你的内容需要进行调整 */
 	}
 }
