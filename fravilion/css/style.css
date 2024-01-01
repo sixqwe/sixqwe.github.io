@@ -76,77 +76,23 @@ body {
 	}
 }
 
-
+/* 黑暗模式 */
 @media screen and (prefers-color-scheme:dark) {
-	:root {}
-}
-
-hr {
-	box-sizing: content-box;
-	height: 0;
-	overflow: visible;
-}
-
-
-abbr[title] {
-	border-bottom: none;
-	text-decoration: underline;
-	text-decoration: underline dotted;
-}
-
-code,
-kbd,
-samp {
-	font-family: monospace, monospace;
-	font-size: 1em;
-}
-
-small {
-	font-size: 80%;
-	color: var(--geist-gray);
-}
-
-img {
-	border-style: none;
+	:root {	--geist-background-color: #FFFFFF;
+	--geist-important: #637694;
+	--geist-importa: #435D5A;
+	--geist-black: #405A73;
+	--geist-gray2: #CCC;
+	--geist-gray: #555;
+	--geist-font: #051010;
+	--info-black: #304852;
+	--geist-white: #FFFFFF;
+	--background-dark: #435D5A;
+	--black: #000000;}
 }
 
 
-button,
-input {
-	overflow: visible;
-}
 
-button,
-select {
-	text-transform: none;
-}
-
-/* 滚动条 */
-
-[type="checkbox"],
-[type="radio"] {
-	box-sizing: border-box;
-	padding: 0;
-}
-
-[type="number"]::-webkit-inner-spin-button,
-[type="number"]::-webkit-outer-spin-button {
-	height: auto;
-}
-
-[type="search"] {
-	-webkit-appearance: textfield;
-	outline-offset: -2px;
-}
-
-[type="search"]::-webkit-search-decoration {
-	-webkit-appearance: none;
-}
-
-::-webkit-file-upload-button {
-	-webkit-appearance: button;
-	font: inherit;
-}
 
 
 main {
