@@ -24,8 +24,12 @@ body {
 
 p {
 	color: var(--geist-font);
+	letter-spacing: 0.25em;
+	line-height: 1.6em;
 }
-
+h1{
+	margin-top: 2em;
+}
 main {
 	display: block;
 	width: 60% !important;
