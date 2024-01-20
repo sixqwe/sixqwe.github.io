@@ -1,0 +1,48 @@
+:root {
+	--geist-background-color: #FFFFFF;
+	--geist-important: #637694;
+	--geist-importa: #435D5A;
+	--geist-black: #405A73;
+	--geist-gray2: #CCC;
+	--geist-gray: #555;
+	--geist-font: #051010;
+	--info-black: #304852;
+	--geist-white: #FFFFFF;
+	--background-dark: #435D5A;
+}
+
+div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+}
+
+body {
+	margin: 0 5%;
+	font-size: 90%;
+
+}
+
+p {
+	color: var(--geist-font);
+	letter-spacing: 0.25em;
+	line-height: 1.6em;
+}
+h1{
+	margin-top: 2em;
+}
+main {
+	display: block;
+	width: 60% !important;
+	margin: 0 20% !important;
+}
+
+
+@media (max-width: 767px) {
+	main {
+		margin: 0 1% !important;
+		width: 98% !important;
+	}
+
+
+}
+

@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+		<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no">
+		<!-- 各种字体 -->
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Babylonica">
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Noto Serif Simplified Chinese">
+		<!-- js文件 -->
+		<script src=js/main.js></script>
+		<!-- main -->
+		<title>固 北 阁 - 诗 云</title>
+		<link rel="stylesheet" href="../css/style.css">
+		<link rel="stylesheet" href="../css/grid.css">
+		<link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+	<body>
+		<!-- 调用外部文件 -->
+		<!-- 弹出版权声明 -->
+		<div id=popup>
+			<h2>版权声明</h2>
+			<p>除非特别注明，本站<b>所有文章</b>在<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY-NC-SA
+					4.0</a>协议下授权</p>
+			<p>您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p><button id=confirmButton>确认</button>
+		</div>
+		<script>
+			document.addEventListener("copy", function() {
+				var e = document.getElementById("popup");
+				e.style.display = "block", setTimeout(function() {
+					e.style.opacity = "1"
+				}, 50)
+			}), document.getElementById("confirmButton").addEventListener("click", function() {
+				var e = document.getElementById("popup");
+				e.style.opacity = "0", setTimeout(function() {
+					e.style.display = "none"
+				}, 300)
+			}), window.addEventListener("load", function() {
+				const e = document.querySelector(".scrollable-container");
+				e.addEventListener("wheel", function(t) {
+					e.scrollWidth > e.clientWidth && (t.preventDefault(), e.scrollLeft += t.deltaY)
+				})
+			});
+		</script>
+		<main>
+			<!-- 头部 -->
+			<header id="header">
+				<div style="height: 100px;"></div>
+				<div class="title ptitle" id="title">
+					<h1><a href="../index.html" class="hoverlink">固 北 阁</a></h1>
+					<div class="flex">
+						<p id="p">一个我还活着的地方</p>
+						<p id="nav">
+							<a href="../index.html" class="hoverlink">首页</a>
+							<a href="../about.html" class="hoverlink">关于</a>
+							<a href="../past.html" class="hoverlink">归档</a>
+						</p>
+					</div>
+				</div>
+				<!-- 菜单结束 -->
+			</header><!-- 头部结束 正文开始 -->
+			<style>
+				#shiyun {
+					margin: 0 10%;
+				}
+
+				@media (min-width: 767px) {
+					main {
+						margin: 0 10vw;
+					}
+				}
+			</style>
+			<!-- 返回顶部 -->
+			<style>
+				.box {
+					position: fixed;
+					right: 10px;
+					bottom: 10px;
+					height: 30px;
+					width: 50px;
+					text-align: center;
+					padding-top: 20px;
+					background-color: var(--geist-black);
+					color: var(--geist-importans);
+					border-radius: 20%;
+					overflow: hidden;
+				}
+
+				.box:hover:before {
+					top: 50%
+				}
+
+				.box:hover .box-in {
+					visibility: hidden;
+				}
+
+				.box:before {
+					position: absolute;
+					top: -50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					content: '回到顶部';
+					width: 40px;
+					color: var(--geist-white);
+					font-weight: bold;
+
+				}
+
+				.box-in {
+					visibility: visible;
+					display: inline-block;
+					height: 20px;
+					width: 20px;
+					border: 3px solid black;
+					border-color: white transparent transparent white;
+					transform: rotate(45deg);
+				}
+			</style>
+
+
+			<div id="box" class="box">
+				<div class="box-in"></div>
+			</div>
+			<script>
+				var timer = null;
+				box.onclick = function() {
+					cancelAnimationFrame(timer);
+					//获取当前毫秒数
+					var startTime = +new Date();
+					//获取当前页面的滚动高度
+					var b = document.body.scrollTop || document.documentElement.scrollTop;
+					var d = 500;
+					var c = b;
+					timer = requestAnimationFrame(function func() {
+						var t = d - Math.max(0, startTime - (+new Date()) + d);
+						document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
+						timer = requestAnimationFrame(func);
+						if (t == d) {
+							cancelAnimationFrame(timer);
+						}
+					});
+				}
+			</script>
+			<!-- 返回顶部结束 -->
+			<p style="text-align: center;">对不起，我不相信自己<br>但是我相信这些触动我心灵的字能被放在一个我喜欢的地方。无论是否是诗。</p>
+			<hr>
+			<div class=scrollable-container>
+				<div class=scrollable-content>
+					<div class=indexpostli>
+						<ul>
+							<li><a href=#deng class=link-box>等——罗俊鹏</a></li>
+							<li><a href=https://www.wwdd.top class=link-box>
+									<h2 class=indexpostlititle>零碎的</h2>
+								</a></li>
+							<li><a href=#mianchaodahai class=link-box>
+									<p>面朝大海春暖花开</p>
+								</a></li>
+							<li><a href=#zuguohuoyimengweima class=link-box>
+									<p>祖国或以梦为马</p>
+								</a></li>
+							<li><a href=#xiegeibozishangdepusa class=link-box>
+									<p>写给脖子上的菩萨</p>
+								</a></li>
+							<li><a href=#riji class=link-box>
+									<p>日记</p>
+								</a></li>
+							<li><a href=#danchiniao class=link-box>
+									<p>单翅鸟</p>
+								</a></li>
+							<li><a href=#woqingqiuyu class=link-box>
+									<p>我请求：雨</p>
+								</a></li>
+							<li><a href=#woyijiqitadezhengren class=link-box>
+									<p>我，以及其他的证人</p>
+								</a></li>
+							<li><a href=#haizi class=link-box>
+									<h2 class=indexpostlititle>海子</h2>
+								</a></li>
+							<li><a href=#huida class=link-box>
+									<p>回答</p>
+								</a></li>
+							<li><a href=#yiqie class=link-box>
+									<p>一切</p>
+								</a></li>
+							<li><a href=#beidao class=link-box>
+									<h2 class=indexpostlititle>北岛</h2>
+								</a></li>
+						</ul>
+
+						<h1>目录</h1>
+					</div>
+				</div>
+			</div>
+			<hr>
+			<div id="shiyun">
+				<h1 id=beidao>北岛</h1>
+				<hr>
+				<h2 id="yiqie">一切</h2>
+				<p>一切都是命运</p>
+				<p>一切都是烟云</p>
+				<p>一切都是没有结局的开始</p>
+				<p>一切都是稍纵即逝的追寻</p>
+				<p>一切欢乐都没有微笑</p>
+				<p>一切苦难都没有泪痕</p>
+				<p>一切语言都是重复</p>
+				<p>一切交往都是初逢</p>
+				<p>一切爱情都在心里</p>
+				<p>一切往事都在梦中</p>
+				<p>一切希望都带着注释</p>
+				<p>一切信仰都带着呻吟</p>
+				<p>一切爆发都有片刻的宁静</p>
+				<p>一切死亡都有冗长的回声</p>
+				<hr>
+				<h2 id=huida>回答</h2>
+				<p>卑鄙是卑鄙者的通行证，</p>
+				<p>高尚是高尚者的墓志铭。</p>
+				<p>看吧，在那镀金的天空中，</p>
+				<p>飘满了死者弯曲的倒影。</p><br>
+				<p>冰川纪过去了，</p>
+				<p>为什么到处都是冰凌？</p>
+				<p>好望角发现了，</p>
+				<p>为什么死海里千帆相竞？</p><br>
+				<p>我来到这个世界上，</p>
+				<p>只带着纸、绳索和身影，</p>
+				<p>为了在审判之前，</p>
+				<p>宣读那些被判决了的声音：</p><br>
+				<p>告诉你吧，世界，</p>
+				<p>我——不——相——信！</p>
+				<p>纵使你脚下有一千名挑战者，</p>
+				<p>那就把我算做第一千零一名。</p><br>
+				<p>我不相信天是蓝的，</p>
+				<p>我不相信雷的回声；</p>
+				<p>我不相信梦是假的，</p>
+				<p>我不相信死无报应。</p><br>
+				<p>如果海洋注定要决堤，</p>
+				<p>就让所有的苦水都注入我心中；</p>
+				<p>如果陆地注定要上升，</p>
+				<p>就让人类重新选择生存的峰顶。</p><br>
+				<p>新的转机和闪闪的星斗，</p>
+				<p>正在缀满没有遮拦的天空，</p>
+				<p>那是五千年的象形文字，</p>
+				<p>那是未来人们凝视的眼睛。</p><br>
+				<hr>
+				<h1 id=haizi>海子</h1>
+				<hr>
+				<h2 id="woyijiqitadezhengren">我，以及其他的证人</h2>
+				<p>故乡的星和羊群</p>
+				<p>像一支支白色美丽的流水</p>
+				<p>跑过</p>
+				<p>小鹿跑过</p>
+				<p>夜晚的目光紧紧追着</p><br>
+				<p>在空旷的野地上，发现第一枝植物</p>
+				<p>脚插进土地</p>
+				<p>再也拔不出</p>
+				<p>那些寂寞的花朵</p>
+				<p>是春天遗失的嘴唇</p><br>
+				<p>为自己的日子</p>
+				<p>在自己的脸上留下伤口</p>
+				<p>因为没有别的一切为我们作证</p><br>
+				<p>我和过去</p>
+				<p>隔着黑色的土地</p>
+				<p>我和未来</p>
+				<p>隔着无声的空气</p>
+				<p>我打算卖掉一切</p>
+				<p>有人出价就行</p>
+				<p>除了火种、取火的工具</p>
+				<p>除了眼睛</p>
+				<p>被你们打得出血的眼睛</p><br>
+				<p>一只眼睛留给纷纷的花朵</p>
+				<p>一只眼睛永不走出铁铸的城门</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;​黑井</p>
+				<hr>
+				<h2 id="woqingqiuyu">我请求：雨</h2>
+				<p>我请求熄灭</p>
+				<p>生铁的光爱人的光和阳光</p>
+				<p>我请求下雨</p>
+				<p>我请求</p>
+				<p>在夜里死去</p><br>
+				<p>我请求在早上</p>
+				<p>你碰见</p>
+				<p>埋我的人</p><br>
+				<p>岁月的尘埃无边</p>
+				<p>秋天</p>
+				<p>我请求</p>
+				<p>下一场雨</p>
+				<p>洗清我的骨头</p><br>
+				<p>我的眼睛合上</p>
+				<p>我请求</p>
+				<p>雨</p>
+				<p>雨是一生过错</p>
+				<p>雨是悲欢离合</p>
+				<hr>
+				<h2 id="danchiniao">单翅鸟</h2>
+				<p>单翅鸟为什么要飞呢</p>
+				<p>为什么</p>
+				<p>头朝着天地</p>
+				<p>躺着许多束朴素的光线</p><br>
+				<p>菩提，菩提想起</p>
+				<p>石头</p>
+				<p>那么多被天空磨平的面孔</p>
+				<p>都很陌生</p>
+				<p>堆积着世界的一半</p>
+				<p>摸摸周围</p>
+				<p>你就会捡起一块</p>
+				<p>砸碎另一块</p><br>
+				<p>单翅鸟为什么要飞呢</p>
+				<p>我为什么</p>
+				<p>喝下自己的影子</p>
+				<p>揪着头发作为翅膀</p>
+				<p>离开</p><br>
+				<p>也不知天黑了没有</p>
+				<p>穿过自己的手掌比穿过别人的墙壁还难</p>
+				<p>单翅鸟</p>
+				<p>为什么要飞呢</p><br>
+				<p>肥胖的花朵</p>
+				<p>喷出水</p>
+				<p>我眯着眼睛离开</p>
+				<p>居住了很久的心和世界</p><br>
+				<p>你们都不醒来</p>
+				<p>我为什么</p>
+				<p>为什么要飞呢</p>
+				<hr>
+				<h2 id=riji>日记</h2>
+				<p>姐姐，今夜我在德令哈，夜色笼罩</p>
+				<p>姐姐，今夜我只有戈壁</p><br>
+				<p>草原尽头我两手空空</p>
+				<p>悲痛时握不住一颗泪滴</p>
+				<p>姐姐，今夜我在德令哈</p>
+				<p>这是雨水中一座荒凉的城</p><br>
+				<p>除了那些路过的和居住的</p>
+				<p>德令哈......今夜</p>
+				<p>这是惟一的，最后的，抒情</p>
+				<p>这是惟一的，最后的，草原</p><br>
+				<p>我把石头还给石头</p>
+				<p>让胜利的胜利</p>
+				<p>今夜青稞只属于她自己</p>
+				<p>一切都在生长</p>
+				<p>今夜我只有美丽的戈壁 空空</p>
+				<p>姐姐，今夜我不关心人类，我只想你</p>
+				<hr>
+				<h2 id="xiegeibozishangdepusa">写给脖子上的菩萨</h2>
+				<p>呼吸，呼吸</p>
+				<p>我们是装满热气的</p>
+				<p>两只小瓶</p>
+				<p>被菩萨放在一起</p><br>
+				<p>菩萨是一位很愿意</p>
+				<p>帮忙的</p>
+				<p>东方女人</p>
+				<p>一生只帮你一次</p><br>
+				<p>这也足够了</p>
+				<p>通过她</p>
+				<p>也通过我自己</p>
+				<p>双手碰到了你，你的</p><br>
+				<p>呼吸</p><br>
+				<p>两片抖动的小红帆</p>
+				<p>含在我的唇间</p>
+				<p>菩萨知道</p><br>
+				<p>菩萨住在竹林里</p>
+				<p>她什么都知道</p>
+				<p>知道今晚</p>
+				<p>知道一切恩情</p>
+				<p>知道海水是我</p>
+				<p>洗着你的眉</p>
+				<p>知道你就在我身上呼吸</p>
+				<p>呼吸</p><br>
+				<p>菩萨愿意</p>
+				<p>菩萨心里非常愿意</p>
+				<p>就让我出生</p>
+				<p>让我长成的身体上</p>
+				<p>挂着潮湿的你</p>
+				<hr>
+				<h2 id="zuguohuoyimengweima">祖国(或以梦为马)</h2>
+				<p>我要做远方的忠诚的儿子</p>
+				<p>和物质的短暂情人</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>我不得不和烈士和小丑走在同一道路上</p><br>
+				<p>万人都要将火熄灭 我一人独将此火高高举起</p>
+				<p>此火为大 开花落英于神圣的祖国</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>我藉此火得度一生的茫茫黑夜</p><br>
+				<p>此火为大 祖国的语言和乱石投筑的梁山城寨</p>
+				<p>以梦为上的敦煌——那七月也会寒冷的骨骼</p>
+				<p>如雪白的柴和坚硬的条条白雪 横放在众神之山</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>我投入此火 这三者是囚禁我的灯盏 吐出光辉</p><br>
+				<p>万人都要从我刀口走过 去建筑祖国的语言</p>
+				<p>我甘愿一切从头开始</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>我也愿将牢底坐穿</p><br>
+				<p>众神创造物中只有我最易朽 带着不可抗拒的 死亡的速度</p>
+				<p>只有粮食是我珍爱</p>
+				<p>我将她紧紧抱住 抱住她 在故乡生儿育女</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>我也愿将自己埋葬在四周高高的山上 守望平静家园</p><br>
+				<p>面对大河我无限惭愧</p>
+				<p>我年华虚度 空有一身疲倦</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>岁月易逝 一滴不剩 水滴中有一匹马儿 一命归天</p><br>
+				<p>千年后如若我再生于祖国的河岸</p>
+				<p>千年后我再次拥有中国的稻田 和周天子的雪山</p>
+				<p>天马踢踏</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>我选择永恒的事业</p><br>
+				<p>我的事业 就是要成为太阳的一生</p>
+				<p>他从古至今——“日”——他无比辉煌无比光明</p>
+				<p>和所有以梦为马的诗人一样</p>
+				<p>最后我被黄昏的众神抬入不朽的太阳</p><br>
+				<p>太阳是我的名字</p>
+				<p>太阳是我的一生</p>
+				<p>太阳的山顶埋葬 诗歌的尸体——千年王国和我</p>
+				<p>骑着五千年凤凰和名字叫&quot;马&quot;的龙——我必将失败</p>
+				<p>但诗歌本身以太阳必将胜利 </p>
+				<hr>
+				<h2 id="mianchaodahai">面朝大海春暖花开</h2>
+				<p>从明天起，做一个幸福的人</p>
+				<p>喂马，劈柴，周游世界</p>
+				<p>从明天起，关心粮食和蔬菜</p>
+				<p>我有一所房子，面朝大海，春暖花开</p><br>
+				<p>从明天起，和每一个亲人通信</p>
+				<p>告诉他们我的幸福</p>
+				<p>那幸福的闪电告诉我的</p>
+				<p>我将告诉每一个人</p><br>
+				<p>给每一条河每一座山取一个温暖的名字</p>
+				<p>陌生人，我也为你祝福</p>
+				<p>愿你有一个灿烂的前程</p>
+				<p>愿你有情人终成眷属</p>
+				<p>愿你在尘世获得幸福</p>
+				<p>我只愿面朝大海，春暖花开</p>
+				<hr>
+				<h2 id="deng">等——罗俊鹏</h2>
+				<p>三岁时，</p>
+				<p>你说让我等你五分钟。</p>
+				<p>二十三岁时，</p>
+				<p>你却还没回来。</p><br>
+				<p>爸，我现在不要马路对面的冰糖葫芦了。</p>
+				<hr>
+			</div>
+		</main>
