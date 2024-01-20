@@ -30,18 +30,20 @@
 
 			main {
 				margin: 0 15vw;
-				width: 66vw;
+				width: 70vw;
 			}
 
-p {
-	font-size: 80%;
-	color: var(--geist-font);
-	letter-spacing: 0.25em;
-	line-height: 1.6em;
-}
-code{
-	letter-spacing: 0em;
-}
+			p {
+				font-size: 80%;
+				color: var(--geist-font);
+				letter-spacing: 0.25em;
+				line-height: 1.6em;
+			}
+
+			code {
+				letter-spacing: 0em;
+			}
+
 			img {
 				max-width: 66vw;
 
@@ -49,13 +51,13 @@ code{
 
 			@media (max-width: 767px) {
 				img {
-					max-width: 96vw;
+					max-width: 100%;
 
 				}
 
 				main {
 					margin: 0;
-					width: 96vw;
+					width: 100%;
 				}
 			}
 
@@ -77,10 +79,10 @@ code{
 		</style>
 		<main>
 			<p>在一起的 <b id="blog_running_days"></b> 天</p>
-			
+
 			<script>
 				var blog_running_days = document.getElementById("blog_running_days");
-			
+
 				function refresh_blog_running_time() {
 					var time = new Date() - new Date(2023, 9, 30);
 					var d = parseInt(time / 24 / 60 / 60 / 1000);
@@ -244,7 +246,7 @@ code{
 				<p>想不明白就不用想，总有人会替我解决的，想太多只会越来越约束，越来越喘不过气越来越难受，反正不是什么大事，放在一边就好了，有人认为对，你去附合前一个人，那么出了问题，你也不会是主谋.</p>
 			</div>
 			<hr>
-			
+
 			<div>
 				<p>好：</p>
 				<p>我好累，不开心，每一天都不开心，不想安慰他人，也不需要别人安慰。梦总是很抽象。<br />
