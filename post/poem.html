@@ -7,7 +7,7 @@
 		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Babylonica">
 		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Noto Serif Simplified Chinese">
 		<!-- js文件 -->
-		<script src=js/main.js></script>
+		<script src=../js/fravilion.js></script>
 		<!-- main -->
 		<title>固 北 阁 - 诗 云</title>
 		<link rel="stylesheet" href="../css/style.css">
@@ -45,7 +45,7 @@
 			<header id="header">
 				<div style="height: 100px;"></div>
 				<div class="title ptitle" id="title">
-					<h1><a href="../index.html" class="hoverlink">固 北 阁</a></h1>
+					<h1><a href="../index.html" class="hoverlink">心 阁</a></h1>
 					<div class="flex">
 						<p id="p">一个我还活着的地方</p>
 						<p id="nav">
@@ -68,77 +68,12 @@
 					}
 				}
 			</style>
-			<!-- 返回顶部 -->
-			<style>
-				.box {
-					position: fixed;
-					right: 10px;
-					bottom: 10px;
-					height: 30px;
-					width: 50px;
-					text-align: center;
-					padding-top: 20px;
-					background-color: var(--geist-black);
-					color: var(--geist-importans);
-					border-radius: 20%;
-					overflow: hidden;
-				}
-
-				.box:hover:before {
-					top: 50%
-				}
-
-				.box:hover .box-in {
-					visibility: hidden;
-				}
-
-				.box:before {
-					position: absolute;
-					top: -50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					content: '回到顶部';
-					width: 40px;
-					color: var(--geist-white);
-					font-weight: bold;
-
-				}
-
-				.box-in {
-					visibility: visible;
-					display: inline-block;
-					height: 20px;
-					width: 20px;
-					border: 3px solid black;
-					border-color: white transparent transparent white;
-					transform: rotate(45deg);
-				}
-			</style>
 
 
 			<div id="box" class="box">
 				<div class="box-in"></div>
 			</div>
-			<script>
-				var timer = null;
-				box.onclick = function() {
-					cancelAnimationFrame(timer);
-					//获取当前毫秒数
-					var startTime = +new Date();
-					//获取当前页面的滚动高度
-					var b = document.body.scrollTop || document.documentElement.scrollTop;
-					var d = 500;
-					var c = b;
-					timer = requestAnimationFrame(function func() {
-						var t = d - Math.max(0, startTime - (+new Date()) + d);
-						document.documentElement.scrollTop = document.body.scrollTop = t * (-c) / d + b;
-						timer = requestAnimationFrame(func);
-						if (t == d) {
-							cancelAnimationFrame(timer);
-						}
-					});
-				}
-			</script>
+			<script src=../js/fravilion.js></script>
 			<!-- 返回顶部结束 -->
 			<p style="text-align: center;">对不起，我不相信自己<br>但是我相信这些触动我心灵的字能被放在一个我喜欢的地方。无论是否是诗。</p>
 			<hr>
