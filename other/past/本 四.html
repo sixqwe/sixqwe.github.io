@@ -181,6 +181,23 @@
 				<p class="pastmain">叠浪涌起。</p>
 				<p class="pastmain">天光，天光映照。<br />白色，白色墙壁。<br />暮色，暮色四合。</p>
 				<p class="pastmain">空间更寂寥的悠长里只有爬行的人。</p>
-
 			</main>
+			<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+			<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+			<div id="gitalk-container"></div>
+			<script>
+				var gitalk = new Gitalk({
+					clientID: '67ca97fc0f919782c296',
+					clientSecret: '332bf66f7d8659ebf4f0a0cf2b86e05aaeda96f3',
+					repo: 'fravilion',
+					owner: 'sixqwe',
+					admin: ['sixqwe'],
+					id: location.pathname, // Ensure uniqueness and length less than 50
+					distractionFreeMode: false // Facebook-like distraction free mode
+				})
+
+				gitalk.render('gitalk-container')
+			</script>
+		</main>
 	</body>
+</html>
