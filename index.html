@@ -191,73 +191,74 @@
 					© 2022-2023<a id="a" href="/about.html"> 心阁</a>｜<a href="../index.html">回到首页</a>
 				</span>
 			</div>
-		</main>
-		<br />
-		<style>
-			.lihea {
-				display: inline-block;
-				padding-left: 4px;
-				font-weight: bold;
-				font-size: 120%;
-			}
 
-			.foooo {
-				position: fixed;
-				top: 80%;
-				width: 100%;
-
-			}
-
-			/* 箭头 */
-			@-webkit-keyframes bounce-up {
-				25% {
-					-webkit-transform: translateY(4px);
+			<br />
+			<style>
+				.lihea {
+					display: inline-block;
+					padding-left: 4px;
+					font-weight: bold;
+					font-size: 120%;
 				}
 
-				50%,
-				100% {
-					-webkit-transform: translateY(0);
+				.foooo {
+					position: fixed;
+					top: 80%;
+					width: 100%;
+
 				}
 
-				75% {
-					-webkit-transform: translateY(-3px);
-				}
-			}
-		</style>
-		<script>
-			//首页逐渐显示
-			$(function() {
-				$(document).on('scroll', function() {
-					var h = $(window).scrollTop();
-					var maxh = $(document).height();
-					var currh = $(window).height();
-					var num = Math.ceil((h - 200) / 70);
-					var str = ".peo_box" + num;
-					if (h > 100 && h < (maxh - currh - 1)) {
-						$(str).addClass('lishow')
-					} else if (h >= (maxh - currh - 1)) {
-						$('.peo_box').addClass('lishow')
-					} else {
-						$('.peo_box').removeClass('lishow')
+				/* 箭头 */
+				@-webkit-keyframes bounce-up {
+					25% {
+						-webkit-transform: translateY(4px);
 					}
-				})
-			});
-		</script>
-		<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
-		<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
-		<div id="gitalk-container"></div>
-		<script>
-			var gitalk = new Gitalk({
-				clientID: '67ca97fc0f919782c296',
-				clientSecret: '332bf66f7d8659ebf4f0a0cf2b86e05aaeda96f3',
-				repo: 'fravilion',
-				owner: 'sixqwe',
-				admin: ['sixqwe'],
-				id: location.pathname, // Ensure uniqueness and length less than 50
-				distractionFreeMode: false // Facebook-like distraction free mode
-			})
 
-			gitalk.render('gitalk-container')
-		</script>
+					50%,
+					100% {
+						-webkit-transform: translateY(0);
+					}
+
+					75% {
+						-webkit-transform: translateY(-3px);
+					}
+				}
+			</style>
+			<script>
+				//首页逐渐显示
+				$(function() {
+					$(document).on('scroll', function() {
+						var h = $(window).scrollTop();
+						var maxh = $(document).height();
+						var currh = $(window).height();
+						var num = Math.ceil((h - 200) / 70);
+						var str = ".peo_box" + num;
+						if (h > 100 && h < (maxh - currh - 1)) {
+							$(str).addClass('lishow')
+						} else if (h >= (maxh - currh - 1)) {
+							$('.peo_box').addClass('lishow')
+						} else {
+							$('.peo_box').removeClass('lishow')
+						}
+					})
+				});
+			</script>
+			<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+			<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+			<div id="gitalk-container"></div>
+			<script>
+				var gitalk = new Gitalk({
+					clientID: '67ca97fc0f919782c296',
+					clientSecret: '332bf66f7d8659ebf4f0a0cf2b86e05aaeda96f3',
+					repo: 'fravilion',
+					owner: 'sixqwe',
+					admin: ['sixqwe'],
+					id: location.pathname, // Ensure uniqueness and length less than 50
+					distractionFreeMode: false // Facebook-like distraction free mode
+				})
+
+				gitalk.render('gitalk-container')
+			</script>
+		</main>
 	</body>
 </html>
