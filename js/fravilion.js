@@ -17,3 +17,22 @@ box.onclick = function() {
         }
     });
 }
+
+
+
+document.addEventListener("copy", function() {
+    var e = document.getElementById("popup");
+    e.style.display = "block", setTimeout(function() {
+        e.style.opacity = "1"
+    }, 50)
+}), document.getElementById("confirmButton").addEventListener("click", function() {
+    var e = document.getElementById("popup");
+    e.style.opacity = "0", setTimeout(function() {
+        e.style.display = "none"
+    }, 300)
+}), window.addEventListener("load", function() {
+    const e = document.querySelector(".scrollable-container");
+    e.addEventListener("wheel", function(t) {
+        e.scrollWidth > e.clientWidth && (t.preventDefault(), e.scrollLeft += t.deltaY)
+    })
+});
