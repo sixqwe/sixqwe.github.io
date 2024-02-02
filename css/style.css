@@ -39,6 +39,13 @@ html {
 	-webkit-text-size-adjust: 100%;
 }
 
+.img {
+	display: block;
+	padding: 5px;
+	border: 0.2px var(--geist-importa) solid;
+	box-sizing: border-box;
+}
+
 body {
 	margin: 0;
 	font-size: 0.9em !important;
