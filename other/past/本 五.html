@@ -30,9 +30,11 @@
 		<!-- js部分 -->
 		<div id=popup>
 			<h2>版权声明</h2>
-			<p class="pastmain">除非特别注明，本站<b>所有文章</b>在<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY-NC-SA
+			<p class="pastmain">除非特别注明，本站<b>所有文章</b>在<a
+					href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY-NC-SA
 					4.0</a>协议下授权</p>
-			<p class="pastmain">您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p><button id=confirmButton>确认</button>
+			<p class="pastmain">您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p><button
+				id=confirmButton>确认</button>
 		</div>
 		<!-- 返回顶端 -->
 		<div id="box" class="box">
@@ -58,15 +60,17 @@
 			</header>
 			<main>
 				<div style="width: 100%; background-color: black;">
-					<p style="text-align: center; color:var(--geist-white) ;">白 色 的 边 际</p>
+					<p style="text-align: center; color:var(--geist-white) ;">17岁 白 色 的 边 际
+						<br />——READING——
+					</p>
 				</div>
 
 				<p class="pastmain">你明白的，可能你也不相信。我，你我大抵一无是处。这个灵魂，除了神还有什么能让这灵魂相信至高的真理。
 					他不明白世上除却自己还有没有灵魂，自己只在躯壳里，因为那些躯壳的举止心中沸腾。
 					是化学物质。存在剥离了我们的神性。
 					语言，我尽力用语言去，用躯壳的话来，传达。
-					神，孩子都知道的神性。不悲不喜，浑然天成。</p>
-				<p class="pastmain">每天的梦里我梦到？/？/？的未来。没有衣食让我如何超脱。我只是想要。为什么？</p>
+					神，都清楚的神性。不悲不喜，浑然天成。</p>
+				<p class="pastmain">每天的梦里我梦到———的未来。没有衣食让我如何超脱。我只是想要。为什么？</p>
 				<p class="pastmain">神性一定要有神的权柄。</p>
 				<hr>
 				<p class="pastmain">今天我又站在这个地方，和你一起站在这里。
@@ -81,6 +85,25 @@
 					你的声音，一直一直萦绕。
 					晚安。</p>
 
-
 			</main>
+
+
+			<link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+			<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+			<div id="gitalk-container"></div>
+			<script>
+				var gitalk = new Gitalk({
+					clientID: '67ca97fc0f919782c296',
+					clientSecret: '332bf66f7d8659ebf4f0a0cf2b86e05aaeda96f3',
+					repo: 'fravilion',
+					owner: 'sixqwe',
+					admin: ['sixqwe'],
+					id: location.pathname, // Ensure uniqueness and length less than 50
+					distractionFreeMode: false // Facebook-like distraction free mode
+				})
+
+				gitalk.render('gitalk-container')
+			</script>
+		</main>
 	</body>
+</html>
