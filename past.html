@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+		<meta name=viewport content="width=device-width,initial-scale=1,user-scalable=no"><!-- 各种字体 -->
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Babylonica">
+		<link rel=stylesheet href="https://fonts.googleapis.com/css?family=Noto Serif Simplified Chinese">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+		<!-- js文件 -->
+		<script src=js/main.js></script><!-- main -->
+		<title>楼 船 - 归 档</title>
+		<link rel=stylesheet href=css/style.css>
+		<link rel=stylesheet href=css/grid.css>
+		<link rel="shortcut icon" href=favicon.ico type="image/x-icon">
+
+	<body>
+		<!-- 调用外部文件 -->
+		<!-- 弹出版权声明 -->
+		<div id=popup>
+			<h2>版权声明</h2>
+			<p>除非特别注明，本站<b>所有文章</b>在<a href=https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh>CC BY-NC-SA
+					4.0</a>协议下授权</p>
+			<p>您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p><button id=confirmButton>确认</button>
+		</div>
+		<script>
+			document.addEventListener("copy", function() {
+				var e = document.getElementById("popup");
+				e.style.display = "block", setTimeout(function() {
+					e.style.opacity = "1"
+				}, 50)
+			}), document.getElementById("confirmButton").addEventListener("click", function() {
+				var e = document.getElementById("popup");
+				e.style.opacity = "0", setTimeout(function() {
+					e.style.display = "none"
+				}, 300)
+			}), window.addEventListener("load", function() {
+				const e = document.querySelector(".scrollable-container");
+				e.addEventListener("wheel", function(t) {
+					e.scrollWidth > e.clientWidth && (t.preventDefault(), e.scrollLeft += t.deltaY)
+				})
+			});
+		</script>
+
+
+
+		<main>
+			<!-- 头部 -->
+
+			<header id="header">
+				<div style="height: 100px;"></div>
+				<div class="title ptitle" id="title">
+					<h1><a href="index.html" class="hoverlink">楼 船</a></h1>
+					<div class="flex">
+						<p id="p">船上楼阁</p>
+						<p id="nav">
+							<a href="index.html" class="hoverlink">首页</a>
+							<a href="about.html" class="hoverlink">关于</a>
+							<a href="past.html" style="background-color: var(--geist-black); color: var(--geist-white);"
+								class="hoverlink">归档</a>
+
+						</p>
+					</div>
+				</div>
+				<!-- 菜单结束 -->
+			</header>
+			<style>
+				span {
+
+					padding: 0.4em;
+				}
+
+				header {
+					font-family: HarmonyOS !important;
+				}
+
+
+
+				.ononon {
+					border: 10px solid var(--info-black);
+					color: var(--shadow);
+					padding: 0.6em;
+					height: 28.2vh;
+				}
+
+				.buttonpast {
+					display: inline-block;
+					padding: 0rem 0rem;
+					margin: 0.08rem 0.04rem;
+					-webkit-transition-duration: 0.4s;
+					border-radius: 4px;
+					background-color: #F0F0F0;
+					color: var(--geist-black);
+					border: 3px solid #161010;
+
+				}
+
+
+				#tit {
+					font-size: 170%;
+					font-weight: bold;
+				}
+
+				.buttonpast:hover {
+					background-color: #161823;
+					color: var(--geist-white);
+
+				}
+
+				.button span {
+					display: inline-block;
+					font-weight: 100 !important;
+					font-family: HarmonyOS !important;
+					margin: 0;
+				}
+
+
+				.indexpostli a {
+					display: inline-block;
+					padding: 0 0.6em;
+				}
+
+				@media (max-width:767px) {
+					.button span {
+						display: inline-block;
+						margin: -8px 0 0.2em 0;
+					}
+				}
+			</style>
+
+			<br><br>
+			<div class="scrollable-container">
+				<div class="scrollable-content">
+					<div class="indexpostli">
+						<h1 id="y">章节——</h1>
+						<h1 style="text-align: center;" id="ty">章节</h1>
+						<div class="button">
+							<p id="y" style="text-align: right; font-size: 110;"><small>——我能懂了什么呢？</small></p>
+							<p id="ty" style="text-align: center; font-size: 110;"><small>关于我的心，之前或者之后</small>
+							</p>
+							<ul>
+
+								<li>
+									<a id="y" href="other/past/本 一.html">
+										本 一
+									</a>
+									<a id="ty" href="other/past/本 一.html">
+										2022-2023年记录
+									</a>
+									<span id="y">二〇二二</span>
+								</li>
+
+								<li>
+									<a id="y" href="other/past/本 二.html">
+										本 二
+									</a>
+									<a id="ty" href="other/past/本 二.html">
+										2023年记录PART1
+									</a>
+									<span id="y">&nbsp;</span>
+								</li>
+
+								<li>
+									<a id="y" href="other/past/本 三.html">
+										本 三
+									</a>
+									<a id="ty" href="other/past/本 三.html">
+										2023年记录PART2
+									</a>
+									<span id="y">&nbsp;</span>
+								</li>
+
+								<li>
+									<a id="y" href="other/past/残 章.html">
+										残 章
+									</a>
+									<a id="ty" href="other/past/残 章.html">
+										残缺的记录
+									</a>
+									<span id="y">二〇二三</span>
+								</li>
+								<li>
+									<a id="y" href="other/past/本 五.html">
+										边 际
+									</a>
+									<a id="ty" href="other/past/本 五.html">
+										2024年的记录
+									</a>
+									<span id="y">二〇二四</span>
+								</li>
+								<li>
+									<a id="y" style="color: var(--mark);" href="other/past/极道.html">
+										极 道
+									</a>
+									<a id="ty" style="color: var(--mark);" href="other/past/极道.html">
+										极 道 - 特别篇
+									</a>
+									<span id="y">特别篇</span>
+								</li>
+
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br />
+			<br />
+
+			<div class="scrollable-container">
+				<div class="scrollable-content">
+					<div class="indexpostli">
+						<h1 id="y">过往身——</h1>
+						<h1 style="text-align: center;" id="ty">过往身</h1>
+						<div class="button">
+							<p id="y" style="text-align: right; font-size: 110;"><small>——我能懂了什么呢？</small></p>
+							<p id="ty" style="text-align: center; font-size: 110;"><small>你 或者 我</small>
+							</p>
+							<ul>
+								<hr id="ty">
+								<li>
+									<a id="y" class="button" href="./Information/徐好.html">
+										徐好
+									</a>
+									<a id="ty" class="button" href="./Information/徐好.html">
+										喜欢的人
+									</a>
+									<span id="y">L O V E</span>
+								</li>
+
+								<li>
+									<a id="y" class="button" href="./Information/高二名单.html">
+										高二学生名单
+									</a>
+									<a id="ty" class="button" href="./Information/高二名单.html">
+										沈阳市三十中学 高二学生名单
+									</a>
+									<span id="y">沈阳市三十中学</span>
+								</li>
+
+								<li>
+									<a id="y" class="button" href="./Information/英文诗歌讲解.html">
+										不要温和的走入那个良夜
+									</a>
+									<a id="ty" class="button" href="./Information/英文诗歌讲解.html">
+										不要温和的走入那个良夜
+									</a>
+									<span id="y">英语诗歌</span>
+								</li>
+
+								<li>
+									<a id="y" class="lihea" href="post/poem.html">诗云</a>
+									<a id="ty" class="lihea" href="post/poem.html">喜欢的现代诗</a>
+									<span id="y">一切起于情生长于文字</span>
+								</li>
+
+								<li>
+									<a id="y" class="lihea" href="post/bleach.html">死神诗集</a>
+									<a id="ty" class="lihea" href="post/bleach.html">bleach诗集 - 久保带人</a>
+									<span id="y">久保带人</span>
+								</li>
+
+								<li>
+									<a id="y" class="lihea" href="other/pazzle/index.html">海 龟 汤</a>
+									<a id="ty" class="lihea" href="other/pazzle/index.html">海 龟 汤</a>
+									<span id="y">玩乐的东西</span>
+								</li>
+
+
+								<li>
+									<a id="y" href="other/MUS/innerindex.html">M U S</a>
+									<a id="ty" href="other/MUS/innerindex.html">M U S - 可能没有死去的一个服务器</a>
+									<span id="y">我的第一个网站</span>
+								</li>
+								<p>——————更多——————</p>
+
+
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<br />
+			<br />
+			<div style="text-align: right; font-weight: bold;height: 10vh;">
+				<span>※ 全站采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 CN
+					</a>进行许可<br>
+					© 2022-2024<a id="a" href="/about.html"> 楼船</a>｜<a href="../index.html">回到首页</a>
+				</span>
+			</div>
+
+			<style>
+				.plistlink {
+					display: inline-block;
+					transition: 1s;
+					transition-timing-function: cubic-bezier(0.1, 1.5, 0.4, 0.9);
+				}
+
+				.plistlink:hover {
+					transform: translateY(1.5em);
+				}
+
+				/* 新增的CSS样式 */
+				.post-content {
+					display: table-cell;
+					vertical-align: middle;
+				}
+
+				.post-date {
+					font-size: 16px;
+					font-weight: 400;
+					width: 100px;
+					/* 调整日期宽度，根据实际需要调整 */
+					margin-right: 30px;
+					/* 调整日期和标题之间的间距 */
+				}
+
+				.post-title {
+					display: inline-block;
+					margin: 0 0 0 -30px;
+					font-size: 1.3em;
+					font-weight: bold;
+					line-height: 3;
+					/* 调整标题的行高，使其竖直对齐 */
+
+				}
+
+				#post {
+					margin: 0 5%;
+				}
+			</style>
+
+			</div>
+			</div>
+			</div>
+		</main>
+	</body>

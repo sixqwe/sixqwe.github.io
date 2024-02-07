@@ -1,0 +1,264 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<!-- 各种字体 -->
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Babylonica">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto Serif Simplified Chinese">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@900&display=swap" rel="stylesheet">
+		<!-- js文件 -->
+
+		<script src="js/main.js"></script>
+		<!-- main -->
+		<title>楼 船 - 关 于 我</title>
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="stylesheet" href="css/grid.css">
+		<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+		<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.js"></script>
+	</head>
+	<body>
+
+
+		<div id="popup">
+			<h2>版权声明</h2>
+			<p>除非特别注明，本站<b>所有文章</b>在<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh"> CC BY-NC-SA 4.0
+				</a>协议下授权</p>
+			<p>您可以在<b>遵守本协议</b>的情况下自由使用本站内容，复制<b>默认</b>同意本协议。<br>点击确认关闭此窗口</p>
+			<button id="confirmButton">确认</button>
+		</div>
+		<script>
+			// 复制时显示版权声明
+			document.addEventListener('copy', function(event) {
+				var popup = document.getElementById('popup');
+				popup.style.display = 'block';
+				setTimeout(function() {
+					popup.style.opacity = '1'
+				}, 50)
+			});
+			document.getElementById('confirmButton').addEventListener('click', function() {
+				var popup = document.getElementById('popup');
+				popup.style.opacity = '0';
+				setTimeout(function() {
+					popup.style.display = 'none'
+				}, 300)
+			});
+
+			// JavaScript代码，实现滚轮横向滚动
+			window.addEventListener('load', function() {
+				const container = document.querySelector('.scrollable-container');
+				container.addEventListener('wheel', function(event) {
+					if (container.scrollWidth > container.clientWidth) {
+						event.preventDefault();
+						container.scrollLeft += event.deltaY;
+					}
+				});
+			});
+		</script>
+
+		<!-- 头部 -->
+		<main>
+			<header id="header">
+				<div style="height: 100px;"></div>
+				<div class="title ptitle" id="title">
+					<h1><a href="index.html" class="hoverlink">楼 船</a></h1>
+					<div class="flex">
+						<p id="p">散落一地</p>
+						<p id="nav">
+							<a href="index.html" class="hoverlink">首页</a>
+							<a href="about.html"
+								style="background-color: var(--geist-black); color: var(--geist-white);"
+								class="hoverlink">关于</a>
+							<a href="past.html" class="hoverlink">归档</a>
+						</p>
+					</div>
+				</div>
+				<!-- 菜单结束 -->
+			</header>
+			<!-- 头部结束 正文开始 -->
+			<br />
+			<br />
+
+
+
+			<div>
+				<aside class="gray">
+					<div>
+						<div>#0.0.5 </div>
+						<div>10, 9, 2023</div>
+						<div>ABOUT ME</div>
+					</div>
+				</aside>
+				<div id="information">
+					<div id="info">
+						<div id="newpost">
+							<div>
+								<style>
+									.lihea {
+										font-size: 100%;
+
+									}
+
+									.fratitle {
+										font-size: auto;
+
+									}
+
+									@media (max-width:767px) {
+										.lihea {
+											font-size: 120%;
+
+										}
+
+										.frtitle {
+											font-size: 180%;
+
+										}
+
+										.fratitle {
+											font-size: 180%;
+
+										}
+									}
+
+									::-webkit-scrollbar {
+										display: none;
+										/* Chrome Safari */
+									}
+
+									body {
+										font-family: HarmonyOS !important;
+									}
+
+									.buttonb {
+										background-color: var(--geist-background-color);
+										border: 2px solid var(--geist-black);
+										text-align: left;
+										padding: 1px;
+										border-radius: 0px;
+									}
+								</style>
+								<div>
+									<a class="newpost hogwarts" href="about.html" style="overflow-y:auto;">
+										<span class="span">联系方式↓</span>
+										<br />
+										<li><strong>微信号：</strong>truttty</li>
+										<li><strong>QQ号：</strong>1900663242（不常用）</li>
+										<li><strong>邮箱：</strong>z1900663242@outlook.com</li>
+										<li><strong>原神uid：</strong>285691984</li>
+									</a>
+									<br>
+									<a class="newpost posthr" href="friends.html">
+										<span class="span">基本信息</span>
+								<p>今天是 博客页面已稳定运行 <b id="blog_running_days"></b> 天，本页面部署于GITHUB PAGE
+										<br />所有内容由<del>（至少在这里）</del>正义的 TRUTTTY 全权<del>（手动更改静态页面）</del>管理</p>
+										<script>
+											var blog_running_days = document.getElementById("blog_running_days");
+
+											function refresh_blog_running_time() {
+												var time = new Date() - new Date(2022, 1, 15);
+												var d = parseInt(time / 24 / 60 / 60 / 1000);
+												blog_running_days.innerHTML = d;
+											}
+											refresh_blog_running_time();
+											if (typeof(bottomTimeIntervalHasSet) == "undefined") {
+												var bottomTimeIntervalHasSet = true;
+												setInterval(function() {
+													refresh_blog_running_time();
+												}, 500);
+											}
+										</script>
+									</a>
+								</div>
+							</div>
+							<a class="newpost posthr" href="past.html">
+								<span class="span">感兴趣的...</span>
+								<br />
+
+								<li class=""><strong>喜欢的颜色</strong>：<code>黑</code> <code>灰</code> <code>白</code>
+								</li>
+								<li class=""><strong>喜欢的书</strong>：
+									<p style="margin:0 21px;">网文：<code>蛊真人</code> <code>道诡异仙</code>
+										<code>无限恐怖</code><br>
+										实体：<code>瓦尔登湖</code> <code>三体</code> <code>局外人</code> <code>人间失格</code>
+										<code>解忧杂货店</code </div>
+								</li>
+								<li class=""><strong>喜欢的乐队</strong>：<code>万能青年旅店</code> <code>草东没有派对</code>
+									<code>痛仰乐队</code> <code>deca joins</code> <code>惘闻</code>
+								</li class="">
+								<li class=""><strong>喜欢的电影</strong>：<code>咒</code>
+									<code>新世纪福音战士新剧场版</code>
+									<code>黑客帝国</code>
+									<code>教父2</code>
+								</li>
+								<li class=""><strong>喜欢的游戏</strong>： <code>死神vs火影 3.8</code> </li>
+								<li class=""><strong>喜欢的动画</strong>： <code>EVA</code> <code>死神</code>
+									<code>进击的巨人</code>
+								</li>
+							</a>
+
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+			<style>
+				strong {
+					display: inline-block;
+				}
+
+				.fav {
+					font-family: 'Courier New', Courier, monospace;
+					letter-spacing: 0.25em;
+					line-height: 1.6em;
+				}
+
+				.fav code {
+					background-color: rgba(27, 31, 35, .05);
+				}
+			</style>
+
+
+			<div class="mainfriends">
+				<div class="scrollable-container">
+					<div class="scrollable-content">
+						<div class="indexpostli">
+							<div class="button">
+								<h1 id="y" class=" fratitle">一些共同的人</h1>
+								<h1 id="ty" class=" fratitle">有趣博客网站收录</h1>
+								<p id="y" style="text-align: right;"><small>和我站在一起</small></p>
+								<ul>
+									<li> <a href="https://www.wwdd.top" target="_blank" class="link-box">
+											<p class="frtitle">双子星</p>
+											<p class="frtext">简单快乐</p>
+										</a></li>
+									<li><a href="https://www.duble.live/" target="_blank" class="link-box">
+											<p class="frtitle">H E L L O</p>
+											<p class="frtext">I'm DUBLE.</p>
+										</a></li>
+									<li><a href="https://shue.io/" target="_blank" class="link-box">
+											<p class="frtitle">Shue</p>
+											<p class="frtext">这里是舒舍的个人网站</p>
+										</a></li>
+									<li> <a href="https://subnooc.com/" target="_blank" class="link-box">
+											<p class="frtitle">主观世界</p>
+											<p class="frtext">走出唯一真理观</p>
+										</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div style="text-align: right; font-weight: bold;height: 10vh;">
+				<span>※ 全站采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/cn/">CC BY-NC-SA 3.0 CN
+					</a>进行许可<br>
+					© 2022-2024<a id="a" href="/about.html"> 楼船</a>｜<a href="../index.html">回到首页</a>
+				</span>
+			</div>
+		</main>
+	</body>
+</html>
