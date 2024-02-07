@@ -803,10 +803,6 @@ ul li a:active {
 	color: var(--geist-font)
 }
 
-.mainfriends {
-	display: block;
-	height: 70vh;
-}
 
 @media (max-width:747px) {
 	.frtitle {
