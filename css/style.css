@@ -5,7 +5,7 @@
 	--geist-black: #343b41;
 	--geist-gray2: #CCC;
 	--geist-gray: #555;
-	--geist-font: #051010;
+	--geist-font: #262626;
 	--info-black: #304852;
 	--geist-white: #FFFFFF;
 	--background-dark: #435D5A;
@@ -130,7 +130,7 @@ main {
 @media (min-width: 767px) {
 	#title {
 		color: var(--geist-font);
-		background-image: linear-gradient(to bottom, rgba(253, 252, 250, 0.1), rgba(240, 240, 244, 0)10%);
+		background-image: linear-gradient(to bottom, rgba(253, 252, 250, 0.5), rgba(240, 240, 244, 0)20%);
 	}
 }
 
@@ -188,10 +188,6 @@ main {
 		display: flex;
 	}
 
-	#title {
-		text-align: center;
-		width: 94vw;
-	}
 
 	#title h1 {
 		margin: -1px;
