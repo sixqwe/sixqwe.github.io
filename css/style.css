@@ -161,6 +161,7 @@ main {
 
 #title p a {
 	padding: 0 1em 0 1em;
+		background-color: rgba(253, 252, 250, 0.5);
 }
 
 .title div {
