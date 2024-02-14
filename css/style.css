@@ -84,7 +84,7 @@ body {
 	}
 }
 
-/* 黑暗模式 */
+/* 
 @media screen and (prefers-color-scheme:dark) {
 	:root {
 		--geist-background-color: #FFFFFF;
@@ -100,7 +100,7 @@ body {
 		--black: #000000;
 	}
 }
-
+  */
 
 
 
