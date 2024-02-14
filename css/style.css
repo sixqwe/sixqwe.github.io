@@ -84,6 +84,24 @@ body {
 	}
 }
 
+/* @media screen and (prefers-color-scheme:dark) {
+	:root {
+		--geist-background-color: #FFFFFF;
+		--geist-important: #637694;
+		--geist-importa: #435D5A;
+		--geist-black: #405A73;
+		--geist-gray2: #CCC;
+		--geist-gray: #555;
+		--geist-font: #051010;
+		--info-black: #304852;
+		--geist-white: #FFFFFF;
+		--background-dark: #435D5A;
+		--black: #000000;
+	}
+} */
+
+
+
 
 
 main {
