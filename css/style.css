@@ -1,15 +1,14 @@
 :root {
 	--geist-background-color: #FFFFFF;
-	--geist-important: #637694;
-	--geist-importa: #435D5A;
-	--geist-black: #343b41;
+	--geist-important: #4a431A;
+	--geist-black: #363530;
 	--geist-gray2: #CCC;
 	--geist-gray: #555;
 	--geist-font: #262626;
-	--info-black: #304852;
+	--info-black: #151012;
 	--geist-white: #FFFFFF;
 	--background-dark: #435D5A;
-	--black: #000000;
+	--black: #343635;
 	--mark: #742820;
 }
 
@@ -43,7 +42,7 @@ html {
 .img {
 	display: block;
 	padding: 5px;
-	border: 0.2px var(--geist-importa) solid;
+	border: 0.2px var(--geist-important) solid;
 	box-sizing: border-box;
 }
 
@@ -53,11 +52,11 @@ body {
 }
 
 .green {
-	color: var(--geist-important) !important;
+	color: var(--geist-font) !important;
 }
 
 .green:hover {
-	color: var(--geist-important) !important;
+	color: var(--geist-white) !important;
 }
 
 .nomo {
@@ -705,7 +704,7 @@ figcaption p {
 
 .indexpostli .button a {
 	display: inline-block;
-	border: 0.2px solid #17181d;
+	border: 0.2px solid var(--black);
 	margin: 0.08rem 0.04rem;
 	-webkit-transition-duration: 0.3s;
 	border-radius: 1px;
@@ -713,7 +712,7 @@ figcaption p {
 }
 
 .indexpostli a:hover {
-	background-color: #161823;
+	background-color: var(--black);
 	color: white;
 }
 
