@@ -130,11 +130,18 @@ main {
 		color: var(--geist-font);
 		background-image: linear-gradient(to bottom, rgba(253, 252, 250, 0.5), rgba(240, 240, 244, 0)20%);
 	}
+	#title h1 {
+		margin: 0;
+		font-size: 3.5em !important;
+		padding-bottom: 0;
+		border: none;
+	}
+	
 }
 
 #title h1 {
 	margin: 0;
-	font-size: 3.5em !important;
+	font-size: 2.5em !important;
 	padding-bottom: 0;
 	border: none;
 }
