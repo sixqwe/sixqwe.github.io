@@ -101,7 +101,7 @@
 
 			<br>
 			<div>
-				<aside>
+				<aside class="peo_box peo_box1 ">
 					<div>
 						<div>verson #1.9.3 </div>
 						<div>24 Jul, 2023</div>
@@ -142,18 +142,18 @@
 
 
 
-								<a class="newpost posthr" href="past.html">
-									<span class="span">[ENTER] 过 往 </span>
-									<p>/一些时间里留下的记录/ </p>
+								<a class="peo_box peo_box2 newpost posthr" href="past.html">
+									<span class="span">[ENTER] 归 纳 </span>
+									<p>/一些时间里留下的记录 & typecho驱动/ </p>
 								</a>
-								<a class=" newpost posthr" href="friends.html">
+								<a class="peo_box peo_box3 newpost posthr" href="friends.html">
 									<span class="span"> 概 述 </span>
 									<p>在电子生命之前或者之后<br>关于我，心与人的一些事情
 									</p>
 								</a>
 							</div>
-							<div style="height: 15em;">
-								<a class="newpost hogwarts" href="about.html" style="overflow-y:auto;">
+							<div style="height: 20vh;">
+								<a class="peo_box peo_box4 newpost hogwarts" href="about.html" style="overflow-y:auto;">
 									<span>记 事</span>
 									<p><em class="green nomo">2022.1.31</em>
 										网站<strong>MUS</strong>上线，使用typecho驱动<br>
@@ -217,9 +217,13 @@
 					}
 				}
 			</style>
+		<script>
+//首页逐渐显示
+$(function(){$(document).on('scroll',function(){var h=$(window).scrollTop();var maxh=$(document).height();var currh=$(window).height();var num=Math.ceil((h-500)/60);var str=".peo_box"+num;if(h>100&&h<(maxh-currh-1)){$(str).addClass('lishow')}else if(h>=(maxh-currh-1)){$('.peo_box').addClass('lishow')}else{$('.peo_box').removeClass('lishow')}})});
 
-			<div style="text-align: right; font-weight: bold;height: 10vh;">
-				<span>※ 全站采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0 CN
+		</script>
+			<div style="text-align: right; font-weight: bold;height: 9vh;">
+				<span class="peo_box peo_box5">※ 全站采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh-hans">CC BY-NC-SA 4.0 CN
 					</a>进行许可<br>
 					© 2022-2024<a id="a" href="/about.html"> 楼船</a>｜<a href="../index.html">回到首页</a>｜<a href="https://icp.gov.moe/?keyword=20240240" target="_blank">萌ICP备20240240号</a>
 					
