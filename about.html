@@ -204,7 +204,7 @@
 							<input class="radio" id="three" name="group" type="radio">
 							<div class="tabs">
 								<label class="tab" id="one-tab" for="one">链接世界</label>
-								<label class="tab" id="two-tab" for="two">未定页面</label>
+								<label class="tab" id="two-tab" for="two">友链申请</label>
 								<label class="tab" id="three-tab" for="three">未定页面</label>
 							</div>
 							<div class="panels">
@@ -263,8 +263,17 @@
 											</div>
 								</div>
 								<div class="panel" id="two-panel">
-									<div class="panel-title">预备</div>
-
+									<div class="panel-title">在此留言</div>
+			<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+			<div id="vcomments"></div>
+			<script>
+				new Valine({
+					pageSize: '5',
+					el: '#vcomments',
+					appId: 'iRh8EYEN2Arz2WqXqVb9v5HC-gzGzoHsz',
+					appKey: 'Z22D5dzkfd3TYvi5Yto1v6Nf'
+				})
+			</script>
 
 								</div>
 								<div class="panel" id="three-panel">

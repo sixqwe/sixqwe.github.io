@@ -87,18 +87,34 @@
 			<main>
 				<p>在一起的 <b id="blog_running_days"></b> 天</p>
 
+				<script>
+					var blog_running_days = document.getElementById("blog_running_days");
+
+					function refresh_blog_running_time() {
+						var time = new Date() - new Date(2023, 9, 30);
+						var d = parseInt(time / 24 / 60 / 60 / 1000);
+						blog_running_days.innerHTML = d;
+					}
+					refresh_blog_running_time();
+					if (typeof(bottomTimeIntervalHasSet) == "undefined") {
+						var bottomTimeIntervalHasSet = true;
+						setInterval(function() {
+							refresh_blog_running_time();
+						}, 500);
+					}
+				</script>
+
 				<script type="text/javascript">
 					loopy()
 
 					function loopy() {
 						var sWord = ""
-						while (sWord != "zck123456") { //设置密码 初始密码codeke
+						while (sWord != "zck123456") {
 							sWord = prompt("输入正确密码才能登陆!")
 						}
 						alert("欢迎访问")
 					}
 				</script>
-
 
 
 				<hr />
