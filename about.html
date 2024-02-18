@@ -119,53 +119,7 @@
 									margin: 0;
 								}
 							</style>
-							<style>
-							
-							        .gt-ico-text, .gt-btn-text {
-							            color: #000000;
-							        }
-							
-							        .gt-container .gt-btn-login {
-							            background-color: var(--geist-black);
-							            border: 1px solid var(--geist-black);
-							        }
-							
-							        .gt-container .gt-btn-public {
-							            background-color: var(--geist-black);
-							            border: 1px solid var(--geist-black);
-							        }
-							
-							        .gt-container .gt-btn-public:hover {
-							            background-color: #25cdd0;
-							            border: 1px solid var(--geist-black);
-							        }
-							
-							        .gt-container .gt-btn {
-							            border: 1px solid var(--geist-black);
-							        }
-							
-							        .gt-container a {
-							            color: var(--geist-black);
-							        }
-							
-							        .gt-container .gt-btn-preview:hover {
-							            border: 1px solid var(--geist-black);
-							        }
-							
-							        .gt-container .gt-svg svg {
-							            fill: var(--geist-black);
-							        }
-							
-							        .gt-container .gt-comment-username {
-							            color: var(--geist-black);
-							        }
-							        
-							        gt-container .gt-popup .gt-action.is--active:before {
-							            background: var(--geist-black);
-							        }
-							
-							
-							</style>
+
 							<div>
 								<div>
 									<a style="height: 16vh;" class="newpost hogwarts" href="message.html"
@@ -317,22 +271,18 @@
 								</div>
 								<div class="panel" id="two-panel">
 									<div class="panel-title">在此留言</div>
-									<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
-									<script src="https://cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
-										<div id="gitalk-container"></div>
-										<script>
-											var gitalk = new Gitalk({
-												clientID: '67ca97fc0f919782c296',
-												clientSecret: '332bf66f7d8659ebf4f0a0cf2b86e05aaeda96f3',
-												repo: 'fravilion',
-												owner: 'sixqwe',
-												admin: ['sixqwe'],
-												id: location.pathname, // Ensure uniqueness and length less than 50
-												distractionFreeMode: false // Facebook-like distraction free mode
-											})
-									
-											gitalk.render('gitalk-container')
-										</script>
+			<script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+			<div id="vcomments"></div>
+			<script>
+				new Valine({
+					pageSize: '5',
+					el: '#vcomments',
+					appId: 'iRh8EYEN2Arz2WqXqVb9v5HC-gzGzoHsz',
+					appKey: 'Z22D5dzkfd3TYvi5Yto1v6Nf'
+				})
+			</script>
+
+
 
 								</div>
 								<div class="panel" id="three-panel">
